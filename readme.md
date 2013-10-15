@@ -1,1 +1,1 @@
-个人博客的尝试
+Trying to build a blog based on Pelican.
