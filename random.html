@@ -1,0 +1,20 @@
+
+<!DOCTYPE html>
+<head>
+    <title>random</title>
+    <script type="text/javascript">
+        function redirect(){
+            var urls = [
+ "http://blog.ryekee.com/fairy-story-about-love.html",
+ "http://blog.ryekee.com/test-chinese.html",
+ "http://blog.ryekee.com/hello-world.html",
+
+        ""];
+
+        var index = Math.floor(Math.random() * (urls.length-1));
+        window.location = urls[index];
+    }
+</script>
+<body onload="redirect()">
+</body>
+</html>
