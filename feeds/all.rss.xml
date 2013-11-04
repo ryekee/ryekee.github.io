@@ -6,7 +6,7 @@
 &lt;p&gt;如今，当我们为网站选择字体时已经有了更大的灵活性，可以清楚的看到，字体设计的渲染技术已经悄然发生了改变。操作系统厂商采用不同的字体渲染策略，这一情况还将随时间继续演化。随着对屏幕上的字体更加深入的了解，我们已经意识到，这些字型的渲染会因为操作系统和字体格式而存在着明显的差异。蛋疼的是，即便是精心设计的字体可能看上去都不适合&lt;code&gt;Windows&lt;/code&gt;，只因为它们缺少了很重要的要素：字体微调（hinting）。&lt;/p&gt;
 &lt;p&gt;本文将介绍字体渲染的原理，它们被开发出来的历程，以及它们是怎么被应用在不同的操作系统和浏览器中的。因此当你为你下一个项目挑选字体时，你就知道要怎么样才可以确保排版的效果了。&lt;/p&gt;
 &lt;h1&gt;渲染策略&lt;/h1&gt;
-&lt;p&gt;&lt;img alt="Ideal shape, black-and-white and grayscale rendering" src="http://farm3.staticflickr.com/2849/10605654775_4ddb0df0bb_o.jpg" /&gt;&lt;!--1--&gt;&lt;br /&gt;
+&lt;p&gt;&lt;img alt="Ideal shape, black-and-white and grayscale rendering" src="http://farm3.staticflickr.com/2849/10605654775_4ddb0df0bb_o.jpg" /&gt;&lt;!--1--&gt;  &lt;br /&gt;
 &lt;em&gt;理想的形状（左），黑白渲染（中），灰度渲染（右）&lt;/em&gt;
 &amp;nbsp;&lt;/p&gt;
 &lt;h2&gt;栅格化（Rasterization）&lt;/h2&gt;
@@ -100,7 +100,7 @@
 &lt;img alt="JAF Domus Titling Web rendered in Mac OS X" src="http://farm3.staticflickr.com/2830/10605688375_9605a7257b_o.jpg" /&gt;&lt;!--28--&gt;&lt;br /&gt;
 &lt;em&gt;JAF Domus Titling字体在不同的环境下的渲染效果&lt;/em&gt;  &lt;/p&gt;
 &lt;p&gt;在IE6到IE8中，&lt;code&gt;GDI ClearType&lt;/code&gt;渲染效果的锯齿无法避免，但在其他环境下都可以得到平滑的渲染效果。这就意味着我们还是需要使用带有微调的&lt;code&gt;TrueType&lt;/code&gt;字体，因为操蛋的IE6 - 8还是有着巨大的市场份额。&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Bello by Underware on Typekit" src="http://farm3.staticflickr.com/2869/10605689535_f79c4e1b56_o.jpg" /&gt;&lt;!--29--&gt;
+&lt;p&gt;&lt;img alt="Bello by Underware on Typekit" src="http://farm3.staticflickr.com/2869/10605689535_f79c4e1b56_o.jpg" /&gt;&lt;!--29--&gt;  &lt;br /&gt;
 &lt;em&gt;Typekit上的Underware设计室设计的Bello字体就是PostScript格式的Web字体（右侧），它比左边的TrueType字体轮廓要更顺滑一些&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;Typekit也开始采用混合策略，提供&lt;code&gt;PostScript&lt;/code&gt;格式的屏显字体，为&lt;code&gt;Windows GDI&lt;/code&gt;提供更平滑的渲染效果。但这需要为制定一些视觉效果的评判标准。&lt;/p&gt;
 &lt;p&gt;你们可能会问我，「你大爷的究竟要如何定义屏显字体（display font）啊？」&lt;br /&gt;
