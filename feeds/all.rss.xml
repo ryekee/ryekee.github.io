@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>localhost/Ryekee</title><link>http://blog.ryekee.com/</link><description>我们生来就是要吹牛逼的</description><atom:link href="http://blog.ryekee.com/feeds/all.rss.xml" rel="self"></atom:link><lastBuildDate>Mon, 04 Nov 2013 16:33:00 +0800</lastBuildDate><item><title>字体渲染背后不得不说的故事</title><link>http://blog.ryekee.com/font-rendering.html</link><description>&lt;blockquote&gt;
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>localhost/Ryekee</title><link>http://blog.ryekee.com/</link><description>我们生来就是要吹牛逼的</description><atom:link href="http://blog.ryekee.com/feeds/all.rss.xml" rel="self"></atom:link><lastBuildDate>Mon, 04 Nov 2013 20:43:00 +0800</lastBuildDate><item><title>字体渲染背后不得不说的故事</title><link>http://blog.ryekee.com/font-rendering.html</link><description>&lt;blockquote&gt;
 &lt;p&gt;两年多（原文写于2012年）以前开始的Web字体革命，引出了一个我们忽视了多年的问题：&lt;strong&gt;字体渲染&lt;/strong&gt;，新被发明出来的Web字体给我们带来了新的挑战。选择使用一个字体不再仅仅是样式问题，它已值得我们去探寻其背后是如何实现的了。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;虽然我们无法改变网站访客的浏览器和操作系统，但了解字体渲染的原理，有助于我们搭建一个对所有人都友好易读的网站。直到最近，我们可以使用的「Web零风险」字体屈指可数。但它们为屏幕显示进行了精心的设计以及优化，因此不必太担心这些字体的显示效果。&lt;/p&gt;
@@ -114,7 +114,7 @@
 &lt;li&gt;&lt;a href="http://justanotherfoundry.com/domus-titling-web"&gt;《JAF Domus Titling 字体》&lt;/a&gt;，Just Another Foundry&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://blog.typekit.com/2011/07/26/new-from-typekit-improved-font-rendering-on-windows/"&gt;《Typekit 更新：为 Windows 改善字体渲染》&lt;/a&gt;，Typekit 官方博客&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://blogs.adobe.com/typblography/2010/12/the-benefits-of-opentypecff-over-truetype.html"&gt;《OpenType/CFF 相对于 TrueType 的优势》&lt;/a&gt;，Typblography&lt;/li&gt;
-&lt;/ul&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Ryekee</dc:creator><pubDate>Mon, 04 Nov 2013 16:33:00 +0800</pubDate><guid>tag:blog.ryekee.com,2013-11-04:font-rendering.html</guid><category>fonts</category><category>translation</category><category>geek</category></item><item><title>使用Pelican搭建静态Blog</title><link>http://blog.ryekee.com/guidebook-to-pelican.html</link><description>&lt;h1&gt;什么是静态博客&lt;/h1&gt;
+&lt;/ul&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Ryekee</dc:creator><pubDate>Mon, 04 Nov 2013 20:43:00 +0800</pubDate><guid>tag:blog.ryekee.com,2013-11-04:font-rendering.html</guid><category>fonts</category><category>translation</category><category>geek</category></item><item><title>使用Pelican搭建静态Blog</title><link>http://blog.ryekee.com/guidebook-to-pelican.html</link><description>&lt;h1&gt;什么是静态博客&lt;/h1&gt;
 &lt;p&gt;如果你关注了我的主博客&lt;a href="http://ryekee.com"&gt;RyekeeBlog&lt;/a&gt;，那么你应该知道，现今最流行的博客系统是&lt;code&gt;WordPress&lt;/code&gt;。不但安装快捷方便，还有无数的开发者为它开发插件和主题，有的空间甚至提供了一键安装（如SAE），把搭建自己的Blog门槛降到了最低。但是，我们可能并不需要这么多的自由度，不需要那么多酷炫的主题和拖慢加载速度的插件，我们需要的仅仅是一个顶级域名和对内容的绝对控制权。因此，&lt;code&gt;Qzone&lt;/code&gt;和&lt;code&gt;SinaBlog&lt;/code&gt;已经满足不了你了，而&lt;code&gt;WordPress&lt;/code&gt;又给了我们太多不需要的东西。&lt;/p&gt;
 &lt;p&gt;静态博客就是在本地生成&lt;code&gt;HTML&lt;/code&gt;文件，并托管在支持Web服务的第三方空间上以供读者访问。&lt;/p&gt;
 &lt;h1&gt;静态博客的优势&lt;/h1&gt;
