@@ -102,7 +102,7 @@ Filed under <a href="http://blog.ryekee.com/category/geek.html">geek</a>
 <em>LCD屏中的亚像素渲染</em></p>
 <p>如果我们需要降低图片的饱和度，采用该技术的好处就显而易见了。相比于单纯的灰度渲染，水平方向的分辨率是其三倍。垂直方向的位置和粗细也更加的精确，文本也呈现得更加清晰。</p>
 <h1>当前的应用情况</h1>
-<p>浏览器中文本的显示完全依赖于系统的渲染技术，因此当我们讨论Web字体渲染时，关键还是操作系统所采用的渲染技术。然而，由于每个浏览器所采用的技术都不相同，字间距（kerning）、连结部位（ligatures）、下划线位置甚至它们的粗细都不一样，因此我们无法在这些不同的浏览器中获得完全相同的渲染 效果（即便是在同一个操作系统下）。 <br />
+<p>浏览器中文本的显示完全依赖于系统的渲染技术，因此当我们讨论Web字体渲染时，关键还是操作系统所采用的渲染技术。然而，由于每个浏览器所采用的技术都不相同，字间距（kerning）、连字（ligatures）、下划线位置甚至它们的粗细都不一样，因此我们无法在这些不同的浏览器中获得完全相同的渲染 效果（即便是在同一个操作系统下）。 <br />
 更蛋疼的是，在<code>Windows</code>下还可能采用两种技术来渲染——<code>GDI</code>或者<code>DirectWrite</code>。</p>
 <p>在我们探寻背后的细节之前，让我们先了解一下每个浏览器所采用的渲染技术：<br />
 <img alt="Rendering modes used by Windows browsers." src="http://farm8.staticflickr.com/7308/10605681796_a770209e69_o.jpg" /><!--4--> <br />
@@ -162,7 +162,7 @@ Filed under <a href="http://blog.ryekee.com/category/geek.html">geek</a>
 <em>iOS上的字体渲染</em>  </p>
 <p><code>iOS</code>上的渲染遵循与<code>Mac OS</code>一样的原理，两者主要的区别就是<code>iOS</code>不采用亚像素渲染。主要的原因就是当设备旋转之后，系统需要重新计算并更新渲染，因为亚像素的排列方向发生了变化。Apple竭尽全力想要减少CPU的使用。</p>
 <h1>结论</h1>
-<p>网站访客所使用的浏览器和操作系统差异很大，有些是没有及时更新，有些是公司的政策所规定，不是用户的错。我个人的建议是尽可能的为用户提供最佳的渲染效果，而不是指责操作系统厂商，或者要求用户更换更好的操作系统（<a href="http://ryekee.com">@Ryekee</a>比如Mac OS？:-P）。</p>
+<p>网站访客所使用的浏览器和操作系统差异很大，有些是没有及时更新，有些是公司的政策所规定，不是用户的错。我个人的建议是尽可能的为用户提供最佳的渲染效果，而不是指责操作系统厂商，或者要求用户更换更好的操作系统（<a href="http://ryekee.com">@Ryekee</a>：比如Mac OS？:-P）。</p>
 <p>在<code>Mac OS</code>和<code>iOS</code>上，我们对渲染没有控制权，但这完全可以接受，因为渲染引擎简直太棒了。除了字体渲染得太过黏乎之外。或许有一天，Web字体服务可以根据不同的平台提供稍浓或稍淡的字体来改善字体的一致性。</p>
 <p>在<code>Windows</code>上，字体微调极为重要，尤其是对<code>TrueType</code>类字体而言（这是万恶的IE6到IE8唯一接受的Web字体格式）。除此之外，选择<code>TrueType</code>还是<code>PostScript</code>字体格式也会对渲染的结果造成重大的影响。除了小号字体的微调外，<code>PostScript</code>的渲染效果完全不逊色于<code>TrueType</code>。尽管   <code>DirectWrite</code>为<code>Windows</code>提供了令人身心愉快的渲染效果，但是良好的字体微调依旧很重要。</p>
 <h1>实际应用：改善屏显字体的渲染效果</h1>
