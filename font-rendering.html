@@ -54,7 +54,7 @@
       </div>
     <div class="row-fluid">
       <div class="span2">
-<p>一 04 十一月 2013 </p>
+<p>六 09 十一月 2013 </p>
 
 <p style="text-align: left;">
 Filed under <a href="http://blog.ryekee.com/category/geek.html">Geek</a>
@@ -67,17 +67,19 @@ Filed under <a href="http://blog.ryekee.com/category/geek.html">Geek</a>
       </div>
       
       <div class="span8">
-	<p><em>最近在看关于字体渲染技术的时候看到了<a href="http://www.smashingmagazine.com/2012/04/24/a-closer-look-at-font-rendering/">这篇文章</a>，觉得算是对 Windows、MacOS 以及 iOS上渲染技术说的比较详细的了，就翻译成了中文，同步更新于<a href="http://ryekee.com/2013/font-rendering">Ryekee_Blog</a>。有任何错误或者不当的翻译欢迎指出。:-)下面开始正文内容：</em></p>
+	<p><em><a href="http://ryekee.com">@Ryekee</a>：最近在看关于字体渲染技术的时候在<a href="http://www.smashingmagazine.com">SmashingMagazine</a>上看到了<a href="http://www.smashingmagazine.com/2012/04/24/a-closer-look-at-font-rendering/">这篇文章</a>，觉得算是对 Windows、MacOS 以及 iOS上渲染技术说的比较详细的了，就翻译成了中文，同步更新于<a href="http://ryekee.com/2013/font-rendering">Ryekee_Blog</a>和<a href="http://blog.ryekee.com/font-rendering.html">localhost/Ryekee</a>。有任何错误或者不当的翻译欢迎指出。:-)</em>   </p>
+<p>在<code>Mac OS</code>的Finder下或者网页（随便什么浏览器）中对文本截屏，之后对图片放大放大不断放大，就可以看到下图所示这样奇怪的东西了。为什么纯黑圆滑优美可爱的字体放大之后会有奇怪的颜色出现呢？这背后又有什么神奇的奥秘呢？欢迎来到本期「走进科学」之字体渲染的奥秘。 <br />
+<img alt="Font rendering on Mac OS Finder" src="http://farm6.staticflickr.com/5529/10743683394_639a46e4fd_o.jpg" /><!--0-->    </p>
+<h1>引言</h1>
 <blockquote>
-<p>两年多（原文写于2012年）以前开始的Web字体革命，引出了一个我们忽视了多年的问题：<strong>字体渲染</strong>，新被发明出来的Web字体给我们带来了新的挑战。选择使用一个字体不再仅仅是样式问题，它已值得我们去探寻其背后是如何实现的了。</p>
+<p>两年多（原文写于2012年）以前开始的Web字体革命，引出了一个我们忽视了多年的问题：<strong>字体渲染</strong>，新被发明出来的Web字体给我们带来了新的挑战。选择使用一个字体不再仅仅涉及到样式的问题，它更值得我们去探寻技术上是如何实现的了。</p>
 </blockquote>
-<p>虽然我们无法改变网站访客的浏览器和操作系统，但了解字体渲染的原理，有助于我们搭建一个对所有人都友好易读的网站。直到最近，我们可以使用的「Web零风险」字体屈指可数。但它们为屏幕显示进行了精心的设计以及优化，因此不必太担心这些字体的显示效果。</p>
-<p>如今，当我们为网站选择字体时已经有了更大的灵活性，可以清楚的看到，字体设计的渲染技术已经悄然发生了改变。操作系统厂商采用不同的字体渲染策略，这一情况还将随时间继续演化。随着对屏幕上的字体更加深入的了解，我们已经意识到，这些字型的渲染会因为操作系统和字体格式而存在着明显的差异。蛋疼的是，即便是精心设计的字体可能看上去都不适合<code>Windows</code>，只因为它们缺少了很重要的要素：字体微调（hinting）。</p>
+<p>虽然我们无法改变网站访客的浏览器和操作系统，但了解字体渲染的原理，有助于我们搭建一个对所有人都友好易读的网站。直到最近，我们可以使用的「Web零风险」字体屈指可数。但这些字体都为屏幕显示进行了精心的设计以及优化，因此你大可以放心它们的显示效果。</p>
+<p>如今，当我们为网站选择字体时，有了更大的灵活性。可以清楚的看到，字体设计的渲染技术已经悄然发生了改变。操作系统厂商正在采用不同的字体渲染策略，而这一情况还将随时间继续演化。随着对屏幕上的字体更加深入的了解，我们已经意识到，这些字体的渲染会因为操作系统和字体格式而存在着明显的差异。蛋疼的是，即便是精心设计的字体可能看上去都不适合<code>Windows</code>，只因为它们缺少了很重要的要素：字体微调（hinting）。</p>
 <p>本文将介绍字体渲染的原理，它们被开发出来的历程，以及它们是怎么被应用在不同的操作系统和浏览器中的。因此当你为你下一个项目挑选字体时，你就知道要怎么样才可以确保排版的效果了。</p>
 <h1>渲染策略</h1>
 <p><img alt="Ideal shape, black-and-white and grayscale rendering" src="http://farm3.staticflickr.com/2849/10605654775_4ddb0df0bb_o.jpg" /><!--1-->  <br />
-<em>理想的形状（左），黑白渲染（中），灰度渲染（右）</em>
-&nbsp;</p>
+<em>理想的形状（左），黑白渲染（中），灰度渲染（右）</em></p>
 <h2>栅格化（Rasterization）</h2>
 <p>在数字形态（digital type）中，字体被设计成矢量的图像。当文本在屏幕上显示时，需要将图形栅格化，理想的显示效果是需要不同的大小的一个个像素网格来共同组成字体的。你可以看到理想的形状中e的边缘并没有占满整个像素，但由于我们所能控制的最小元素就是像素了，也就造成了现实与理想的差距。<br />
 因此，工业界发明出了越来越先进的渲染策略，以确保屏幕显示的字体友好易读。</p>

@@ -1,15 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>localhost/Ryekee</title><link>http://blog.ryekee.com/</link><description>我们生来就是要吹牛逼的</description><atom:link href="http://blog.ryekee.com/feeds/geek.rss.xml" rel="self"></atom:link><lastBuildDate>Mon, 04 Nov 2013 20:43:00 +0800</lastBuildDate><item><title>字体渲染背后不得不说的故事</title><link>http://blog.ryekee.com/font-rendering.html</link><description>&lt;p&gt;&lt;em&gt;最近在看关于字体渲染技术的时候看到了&lt;a href="http://www.smashingmagazine.com/2012/04/24/a-closer-look-at-font-rendering/"&gt;这篇文章&lt;/a&gt;，觉得算是对 Windows、MacOS 以及 iOS上渲染技术说的比较详细的了，就翻译成了中文，同步更新于&lt;a href="http://ryekee.com/2013/font-rendering"&gt;Ryekee_Blog&lt;/a&gt;。有任何错误或者不当的翻译欢迎指出。:-)下面开始正文内容：&lt;/em&gt;&lt;/p&gt;
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>localhost/Ryekee</title><link>http://blog.ryekee.com/</link><description>我们生来就是要吹牛逼的</description><atom:link href="http://blog.ryekee.com/feeds/geek.rss.xml" rel="self"></atom:link><lastBuildDate>Sat, 09 Nov 2013 01:05:00 +0800</lastBuildDate><item><title>字体渲染背后不得不说的故事</title><link>http://blog.ryekee.com/font-rendering.html</link><description>&lt;p&gt;&lt;em&gt;&lt;a href="http://ryekee.com"&gt;@Ryekee&lt;/a&gt;：最近在看关于字体渲染技术的时候在&lt;a href="http://www.smashingmagazine.com"&gt;SmashingMagazine&lt;/a&gt;上看到了&lt;a href="http://www.smashingmagazine.com/2012/04/24/a-closer-look-at-font-rendering/"&gt;这篇文章&lt;/a&gt;，觉得算是对 Windows、MacOS 以及 iOS上渲染技术说的比较详细的了，就翻译成了中文，同步更新于&lt;a href="http://ryekee.com/2013/font-rendering"&gt;Ryekee_Blog&lt;/a&gt;和&lt;a href="http://blog.ryekee.com/font-rendering.html"&gt;localhost/Ryekee&lt;/a&gt;。有任何错误或者不当的翻译欢迎指出。:-)&lt;/em&gt;   &lt;/p&gt;
+&lt;p&gt;在&lt;code&gt;Mac OS&lt;/code&gt;的Finder下或者网页（随便什么浏览器）中对文本截屏，之后对图片放大放大不断放大，就可以看到下图所示这样奇怪的东西了。为什么纯黑圆滑优美可爱的字体放大之后会有奇怪的颜色出现呢？这背后又有什么神奇的奥秘呢？欢迎来到本期「走进科学」之字体渲染的奥秘。 &lt;br /&gt;
+&lt;img alt="Font rendering on Mac OS Finder" src="http://farm6.staticflickr.com/5529/10743683394_639a46e4fd_o.jpg" /&gt;&lt;!--0--&gt;    &lt;/p&gt;
+&lt;h1&gt;引言&lt;/h1&gt;
 &lt;blockquote&gt;
-&lt;p&gt;两年多（原文写于2012年）以前开始的Web字体革命，引出了一个我们忽视了多年的问题：&lt;strong&gt;字体渲染&lt;/strong&gt;，新被发明出来的Web字体给我们带来了新的挑战。选择使用一个字体不再仅仅是样式问题，它已值得我们去探寻其背后是如何实现的了。&lt;/p&gt;
+&lt;p&gt;两年多（原文写于2012年）以前开始的Web字体革命，引出了一个我们忽视了多年的问题：&lt;strong&gt;字体渲染&lt;/strong&gt;，新被发明出来的Web字体给我们带来了新的挑战。选择使用一个字体不再仅仅涉及到样式的问题，它更值得我们去探寻技术上是如何实现的了。&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;虽然我们无法改变网站访客的浏览器和操作系统，但了解字体渲染的原理，有助于我们搭建一个对所有人都友好易读的网站。直到最近，我们可以使用的「Web零风险」字体屈指可数。但它们为屏幕显示进行了精心的设计以及优化，因此不必太担心这些字体的显示效果。&lt;/p&gt;
-&lt;p&gt;如今，当我们为网站选择字体时已经有了更大的灵活性，可以清楚的看到，字体设计的渲染技术已经悄然发生了改变。操作系统厂商采用不同的字体渲染策略，这一情况还将随时间继续演化。随着对屏幕上的字体更加深入的了解，我们已经意识到，这些字型的渲染会因为操作系统和字体格式而存在着明显的差异。蛋疼的是，即便是精心设计的字体可能看上去都不适合&lt;code&gt;Windows&lt;/code&gt;，只因为它们缺少了很重要的要素：字体微调（hinting）。&lt;/p&gt;
+&lt;p&gt;虽然我们无法改变网站访客的浏览器和操作系统，但了解字体渲染的原理，有助于我们搭建一个对所有人都友好易读的网站。直到最近，我们可以使用的「Web零风险」字体屈指可数。但这些字体都为屏幕显示进行了精心的设计以及优化，因此你大可以放心它们的显示效果。&lt;/p&gt;
+&lt;p&gt;如今，当我们为网站选择字体时，有了更大的灵活性。可以清楚的看到，字体设计的渲染技术已经悄然发生了改变。操作系统厂商正在采用不同的字体渲染策略，而这一情况还将随时间继续演化。随着对屏幕上的字体更加深入的了解，我们已经意识到，这些字体的渲染会因为操作系统和字体格式而存在着明显的差异。蛋疼的是，即便是精心设计的字体可能看上去都不适合&lt;code&gt;Windows&lt;/code&gt;，只因为它们缺少了很重要的要素：字体微调（hinting）。&lt;/p&gt;
 &lt;p&gt;本文将介绍字体渲染的原理，它们被开发出来的历程，以及它们是怎么被应用在不同的操作系统和浏览器中的。因此当你为你下一个项目挑选字体时，你就知道要怎么样才可以确保排版的效果了。&lt;/p&gt;
 &lt;h1&gt;渲染策略&lt;/h1&gt;
 &lt;p&gt;&lt;img alt="Ideal shape, black-and-white and grayscale rendering" src="http://farm3.staticflickr.com/2849/10605654775_4ddb0df0bb_o.jpg" /&gt;&lt;!--1--&gt;  &lt;br /&gt;
-&lt;em&gt;理想的形状（左），黑白渲染（中），灰度渲染（右）&lt;/em&gt;
-&amp;nbsp;&lt;/p&gt;
+&lt;em&gt;理想的形状（左），黑白渲染（中），灰度渲染（右）&lt;/em&gt;&lt;/p&gt;
 &lt;h2&gt;栅格化（Rasterization）&lt;/h2&gt;
 &lt;p&gt;在数字形态（digital type）中，字体被设计成矢量的图像。当文本在屏幕上显示时，需要将图形栅格化，理想的显示效果是需要不同的大小的一个个像素网格来共同组成字体的。你可以看到理想的形状中e的边缘并没有占满整个像素，但由于我们所能控制的最小元素就是像素了，也就造成了现实与理想的差距。&lt;br /&gt;
 因此，工业界发明出了越来越先进的渲染策略，以确保屏幕显示的字体友好易读。&lt;/p&gt;
@@ -115,7 +117,7 @@
 &lt;li&gt;&lt;a href="http://justanotherfoundry.com/domus-titling-web"&gt;《JAF Domus Titling 字体》&lt;/a&gt;，Just Another Foundry&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://blog.typekit.com/2011/07/26/new-from-typekit-improved-font-rendering-on-windows/"&gt;《Typekit 更新：为 Windows 改善字体渲染》&lt;/a&gt;，Typekit 官方博客&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://blogs.adobe.com/typblography/2010/12/the-benefits-of-opentypecff-over-truetype.html"&gt;《OpenType/CFF 相对于 TrueType 的优势》&lt;/a&gt;，Typblography&lt;/li&gt;
-&lt;/ul&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Ryekee</dc:creator><pubDate>Mon, 04 Nov 2013 20:43:00 +0800</pubDate><guid>tag:blog.ryekee.com,2013-11-04:font-rendering.html</guid><category>fonts</category><category>translation</category><category>geek</category></item><item><title>使用Pelican搭建静态Blog</title><link>http://blog.ryekee.com/guidebook-to-pelican.html</link><description>&lt;h1&gt;什么是静态博客&lt;/h1&gt;
+&lt;/ul&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Ryekee</dc:creator><pubDate>Sat, 09 Nov 2013 01:05:00 +0800</pubDate><guid>tag:blog.ryekee.com,2013-11-09:font-rendering.html</guid><category>fonts</category><category>translation</category><category>geek</category></item><item><title>使用Pelican搭建静态Blog</title><link>http://blog.ryekee.com/guidebook-to-pelican.html</link><description>&lt;h1&gt;什么是静态博客&lt;/h1&gt;
 &lt;p&gt;如果你关注了我的主博客&lt;a href="http://ryekee.com"&gt;RyekeeBlog&lt;/a&gt;，那么你应该知道，现今最流行的博客系统是&lt;code&gt;WordPress&lt;/code&gt;。不但安装快捷方便，还有无数的开发者为它开发插件和主题，有的空间甚至提供了一键安装（如SAE），把搭建自己的Blog门槛降到了最低。但是，我们可能并不需要这么多的自由度，不需要那么多酷炫的主题和拖慢加载速度的插件，我们需要的仅仅是一个顶级域名和对内容的绝对控制权。因此，&lt;code&gt;Qzone&lt;/code&gt;和&lt;code&gt;SinaBlog&lt;/code&gt;已经满足不了你了，而&lt;code&gt;WordPress&lt;/code&gt;又给了我们太多不需要的东西。&lt;/p&gt;
 &lt;p&gt;静态博客就是在本地生成&lt;code&gt;HTML&lt;/code&gt;文件，并托管在支持Web服务的第三方空间上以供读者访问。&lt;/p&gt;
 &lt;h1&gt;静态博客的优势&lt;/h1&gt;
