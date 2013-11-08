@@ -1,12 +1,15 @@
 Title: 字体渲染背后不得不说的故事  
 Author: Ryekee  
-Date: 2013-11-4 20:43
+Date: 2013-11-9 00:40
 Tags: fonts, translation, geek  
 Category: geek  
 Slug: font-rendering  
 Summary: 放大网页字体的截图，边缘竟出现五彩的颜色，圆滑纯黑并优美的字体放大之后为何会出现诡异的形状和颜色？这背后又有什么神奇的秘密？一起来到本期「走进科学」——字体渲染背后不得不说的故事。
 
-*最近在看关于字体渲染技术的时候看到了[这篇文章](http://www.smashingmagazine.com/2012/04/24/a-closer-look-at-font-rendering/)，觉得算是对 Windows、MacOS 以及 iOS上渲染技术说的比较详细的了，就翻译成了中文，同步更新于[Ryekee_Blog](http://ryekee.com/2013/font-rendering)。有任何错误或者不当的翻译欢迎指出。:-)下面开始正文内容：*
+*[@Ryekee](http://ryekee.com)：最近在看关于字体渲染技术的时候看到了[这篇文章](http://www.smashingmagazine.com/2012/04/24/a-closer-look-at-font-rendering/)，觉得算是对 Windows、MacOS 以及 iOS上渲染技术说的比较详细的了，就翻译成了中文，同步更新于[Ryekee_Blog](http://ryekee.com/2013/font-rendering)和[localhost/Ryekee](http://blog.ryekee.com)。有任何错误或者不当的翻译欢迎指出，:-)*
+
+在`Mac OS`上在Finder中截屏，之后放大图片不断放大，就可以看到下图所示这样奇怪的东西了。为什么黑色圆滑的字体放大之后会有奇怪的东西？这背后又有什么神奇的奥秘呢？一起来到本期「走进科学」〜（奇怪的东西应该是这一段吧……）   
+![Ryekee on Mac OS](http://farm6.staticflickr.com/5529/10743683394_639a46e4fd_o.jpg)<!--0--> 
 
 >两年多（原文写于2012年）以前开始的Web字体革命，引出了一个我们忽视了多年的问题：**字体渲染**，新被发明出来的Web字体给我们带来了新的挑战。选择使用一个字体不再仅仅是样式问题，它已值得我们去探寻其背后是如何实现的了。
 
