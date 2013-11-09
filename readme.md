@@ -1,5 +1,5 @@
 ##About the Blog  
-An blog named [localhost/Ryekee](http://blog.ryekee.com) based on [Pelican](http://blog.getpelican.com). This blog is going to talk about technology only, and other [RyekeeBlog](http://ryekee.com) will takes all the thing what occurs to my mind.
+An blog named [localhost/Ryekee](http://blog.ryekee.com) based on [Pelican](http://blog.getpelican.com). This blog will talk about technology only, and other blog [RyekeeBlog](http://ryekee.com) will takes all the thing what occurs to my mind.
 
 ##About the author
 First release in '92, a nerd, programmer. Version 0.4.3.   
@@ -9,4 +9,4 @@ You can visit [here](http://ryekee.com/aboutme) to view more information about m
 
 ##Copyright
 ![](http://i.creativecommons.org/l/by-nc-sa/3.0/88x31.png)   
-All the works on [localhost/Ryekee](http://blog.ryekee.com) are licensed under a [Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License](http://creativecommons.org/licenses/by-nc-sa/3.0/deed.en_US)    
+All the works on [localhost/Ryekee](http://blog.ryekee.com) are licensed under [Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License](http://creativecommons.org/licenses/by-nc-sa/3.0/deed.en_US).    
