@@ -31,21 +31,31 @@ LINKS =  (('RyekeeBlog', 'http://ryekee.com/'),
 # SOCIAL = (('Twitter', 'http://twitter.ryekee.com'),
 #           ('SinaWeibo', 'http://weibo.ryekee.com'))
 
-ICON_SOCIAL = (('SinaWeibo', 'http://weibo.ryekee.com', 'icon-weibo'),
-               ('Twitter', 'http://twitter.ryekee.com', 'icon-twitter'))
+# ICON_SOCIAL = (('SinaWeibo', 'http://weibo.ryekee.com', 'icon-weibo'),
+#                ('Twitter', 'http://twitter.ryekee.com', 'icon-twitter'))
 
 # 默认每页显示文章数量
-DEFAULT_PAGINATION = 10
-
+DEFAULT_PAGINATION = 8
+ 
 # 设置DISQUS评论插件的帐号
 DISQUS_SITENAME = u"ryekee"
 
 # 设置主题
 THEME = u'pelican-themes/built-texts'
 COLOPHON = True
-COLOPHON_TITLE = "About this blog"
-COLOPHON_CONTENT = "Hi, I'm Ryekee! This is a quite different blog from my main blog named RyekeeBlog. And it's just a backup blog for me."
+COLOPHON_TITLE = "Copyright"
+COLOPHON_CONTENT = '''<img src="http://i.creativecommons.org/l/by-nc-sa/3.0/88x31.png"><br/>
+All the works on <a href="http://blog.ryekee.com">localhost/Ryekee</a> are licensed under <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/deed.en_US">Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License</a>.
 
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-27994824-3', 'ryekee.com');
+  ga('send', 'pageview');
+</script>
+'''
 
 
 # ----插件设置开始---- #
