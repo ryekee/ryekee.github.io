@@ -117,4 +117,70 @@
 &lt;li&gt;&lt;a href="http://justanotherfoundry.com/domus-titling-web"&gt;《JAF Domus Titling 字体》&lt;/a&gt;，Just Another Foundry&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://blog.typekit.com/2011/07/26/new-from-typekit-improved-font-rendering-on-windows/"&gt;《Typekit 更新：为 Windows 改善字体渲染》&lt;/a&gt;，Typekit 官方博客&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://blogs.adobe.com/typblography/2010/12/the-benefits-of-opentypecff-over-truetype.html"&gt;《OpenType/CFF 相对于 TrueType 的优势》&lt;/a&gt;，Typblography&lt;/li&gt;
-&lt;/ul&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Ryekee</dc:creator><pubDate>Sat, 09 Nov 2013 01:05:00 +0800</pubDate><guid>tag:blog.ryekee.com,2013-11-09:font-rendering.html</guid><category>fonts</category><category>translation</category><category>geek</category></item></channel></rss>
+&lt;/ul&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Ryekee</dc:creator><pubDate>Sat, 09 Nov 2013 01:05:00 +0800</pubDate><guid>tag:blog.ryekee.com,2013-11-09:font-rendering.html</guid><category>fonts</category><category>translation</category><category>geek</category></item><item><title>使用Pelican搭建静态Blog</title><link>http://blog.ryekee.com/guidebook-to-pelican.html</link><description>&lt;h1&gt;什么是静态博客&lt;/h1&gt;
+&lt;p&gt;如果你关注了我的主博客&lt;a href="http://ryekee.com"&gt;RyekeeBlog&lt;/a&gt;，那么你应该知道，现今最流行的博客系统是&lt;code&gt;WordPress&lt;/code&gt;。不但安装快捷方便，还有无数的开发者为它开发插件和主题，有的空间甚至提供了一键安装（如SAE），把搭建自己的Blog门槛降到了最低。但是，我们可能并不需要这么多的自由度，不需要那么多酷炫的主题和拖慢加载速度的插件，我们需要的仅仅是一个顶级域名和对内容的绝对控制权。因此，&lt;code&gt;Qzone&lt;/code&gt;和&lt;code&gt;SinaBlog&lt;/code&gt;已经满足不了你了，而&lt;code&gt;WordPress&lt;/code&gt;又给了我们太多不需要的东西。&lt;/p&gt;
+&lt;p&gt;静态博客就是在本地生成&lt;code&gt;HTML&lt;/code&gt;文件，并托管在支持Web服务的第三方空间上以供读者访问。&lt;/p&gt;
+&lt;h1&gt;静态博客的优势&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;静态，对托管空间没有太高的要求 &lt;/li&gt;
+&lt;li&gt;支持&lt;code&gt;Markdown&lt;/code&gt;语法，内容与样式分离&lt;/li&gt;
+&lt;li&gt;Blog文章的文件全部都是文本，使用&lt;code&gt;Git&lt;/code&gt;可以非常方便的备份和管理&lt;/li&gt;
+&lt;li&gt;天然的内嵌代码支持，这是一个程序员的基本素养（lol）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1&gt;Let's ROCK&lt;/h1&gt;
+&lt;p&gt;接下来讲解如何在Windows环境下配置Pelican&lt;/p&gt;
+&lt;h2&gt;安装Pelican&lt;/h2&gt;
+&lt;p&gt;在cmd中输入以下指令：&lt;code&gt;$ pip install pelican&lt;/code&gt;&lt;br /&gt;
+于是我们的Pelican就安装好了。如果出现错误，那么错误的可能有以下几种：&lt;br /&gt;
+1. 你没有安装&lt;code&gt;Python&lt;/code&gt;&lt;br /&gt;
+2. 你没有安装&lt;code&gt;pip&lt;/code&gt;&lt;br /&gt;
+3. 你安装了&lt;code&gt;Python&lt;/code&gt;和&lt;code&gt;pip&lt;/code&gt;，却没有将他们的路径添加到环境变量中去&lt;br /&gt;
+4. 你没有联网&lt;br /&gt;
+5. 你敲指令的姿势不对&lt;/p&gt;
+&lt;h2&gt;建立Blog&lt;/h2&gt;
+&lt;p&gt;在你想要建立博客的目录处新建一个文件夹，并进入文件夹使用Pelican新建一个Blog。  &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="err"&gt;$&lt;/span&gt; &lt;span class="n"&gt;mkdir&lt;/span&gt; &lt;span class="n"&gt;blog&lt;/span&gt;        
+&lt;span class="err"&gt;$&lt;/span&gt; &lt;span class="n"&gt;cd&lt;/span&gt; &lt;span class="n"&gt;blog&lt;/span&gt;   
+&lt;span class="err"&gt;$&lt;/span&gt; &lt;span class="n"&gt;pelican&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;quickstart&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Pelican会问你很多问题，根据你自身的需求。一般情况下，一路回车是不会出错的:P&lt;/p&gt;
+&lt;h2&gt;新建博文&lt;/h2&gt;
+&lt;p&gt;本地的Blog文章保存在&lt;code&gt;content&lt;/code&gt;目录下，在此目录下新建文件夹，&lt;code&gt;Pelican&lt;/code&gt;会自动将文件夹下的文章归类到此分类中去。&lt;/p&gt;
+&lt;p&gt;在你想要存放文章（&lt;code&gt;content&lt;/code&gt;或者你新建的文件夹下）的地方&lt;code&gt;touch&lt;/code&gt;一个&lt;code&gt;*.md&lt;/code&gt;文件即可，编辑你创建的&lt;code&gt;*.md&lt;/code&gt;文件。&lt;/p&gt;
+&lt;p&gt;下面以我的博客的&lt;a href="http://blog.ryekee.com/about-me.html"&gt;About me&lt;/a&gt;页面为例：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Title: About me     # 文章的标题  &lt;br /&gt;
+Date: 2013-10-21 15:15        # 文章的创建日期  &lt;br /&gt;
+Category: About     # 文章存放的分类，如果已经创建了文件夹可以不必添加此标签&lt;br /&gt;
+Tags: about       # 文章的标签&lt;br /&gt;
+Author: Ryekee     # 文章作者，如果在设置文件中填写了可以不必添加&lt;br /&gt;
+Slug: about-me     # 指定生成HTML页面的名称，about-me.html&lt;br /&gt;
+Summary: A page about me    # 文章的缩略&lt;br /&gt;
+# 下面是文章的内容  &lt;br /&gt;
+First release in '92, a nerd, programmer. Version 0.2.3&lt;/p&gt;
+&lt;p&gt;Hi, I'm [Ryekee Zhong](http://aboutme.ryekee.com), study Intelligence Science and Technology in [Xidian University](http://www.xidian.edu.cn). And now I am the Chairman of [XDU-MSTC](http://xdmstc.com).&lt;/p&gt;
+&lt;p&gt;This is a brand new blog for me, I use [Pelican](http://www.pelican.com) to create a blog on [Github](http://github.ryekee.com). And my main blog [RyekeeBlog](http://ryekee.com) is still working with Wordpress.&lt;/p&gt;
+&lt;p&gt;You can visit [here](http://ryekee.com/aboutme) to view more information about me.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2&gt;生成Blog&lt;/h2&gt;
+&lt;p&gt;回到上层目录：&lt;code&gt;$ cd ..&lt;/code&gt;&lt;br /&gt;
+输入指令：&lt;code&gt;$ pelican -s pelicanconf.py content/ -o myblog/&lt;/code&gt;&lt;br /&gt;
+进入&lt;code&gt;myblog&lt;/code&gt;目录看看〜你的博客已经生成好了。现在只要把&lt;code&gt;myblog&lt;/code&gt;下的所有文件上传到服务器就可以访问了。&lt;/p&gt;
+&lt;h2&gt;配置Github&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;Github&lt;/code&gt;用来托管再合适不过了，支持绑定顶级域名、全球均衡的访问速度、GFW特别关照……&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;Github&lt;/code&gt;的配置流程如下：&lt;br /&gt;
+1.注册一个&lt;code&gt;Github&lt;/code&gt;帐号&lt;br /&gt;
+2.新建一个&lt;code&gt;repo&lt;/code&gt;，以&lt;code&gt;*.github.io&lt;/code&gt;命名，其中&lt;code&gt;*&lt;/code&gt;代表着你的&lt;code&gt;Github&lt;/code&gt;的帐号ID&lt;br /&gt;
+3.把&lt;code&gt;myblog&lt;/code&gt;目录下的所有文件上传到这个&lt;code&gt;repo&lt;/code&gt;的&lt;code&gt;master&lt;/code&gt;分支下，如果有困难可以查看一下&lt;code&gt;Github&lt;/code&gt;提供的&lt;code&gt;git&lt;/code&gt;教程，其实只有短短的三行：  &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="err"&gt;$&lt;/span&gt; &lt;span class="n"&gt;git&lt;/span&gt; &lt;span class="n"&gt;add&lt;/span&gt; &lt;span class="p"&gt;.&lt;/span&gt;
+&lt;span class="err"&gt;$&lt;/span&gt; &lt;span class="n"&gt;git&lt;/span&gt; &lt;span class="n"&gt;commit&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;m&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;your message here&amp;quot;&lt;/span&gt;
+&lt;span class="err"&gt;$&lt;/span&gt; &lt;span class="n"&gt;git&lt;/span&gt; &lt;span class="n"&gt;push&lt;/span&gt; &lt;span class="n"&gt;origin&lt;/span&gt; &lt;span class="n"&gt;master&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;好了，过一会儿就可以通过&lt;code&gt;*.github.io&lt;/code&gt;来访问你的博客了。&lt;/p&gt;
+&lt;p&gt;如果需要绑定域名，在根目录下新建一个&lt;code&gt;CNAME&lt;/code&gt;文件，写入你的域名即可。在域名DNS记录中添加一个A记录，指向&lt;code&gt;204.232.175.90&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;OK, now you can go to change your world, my dear David.&lt;/p&gt;
+&lt;p&gt;&lt;del&gt;&lt;em&gt;安装插件&lt;/em&gt; &lt;em&gt;更换主题&lt;/em&gt; &lt;em&gt;修改配置&lt;/em&gt;什么的，等我心情好了再来填坑吧。。&lt;/del&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Ryekee</dc:creator><pubDate>Wed, 30 Oct 2013 10:35:00 +0800</pubDate><guid>tag:blog.ryekee.com,2013-10-30:guidebook-to-pelican.html</guid><category>geek</category><category>blog</category><category>pelican</category></item></channel></rss>
