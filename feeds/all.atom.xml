@@ -17,10 +17,9 @@
 修改后的是：&lt;br /&gt;
 &lt;code&gt;url = git@github.com:[your_id]/[repo_name].git&lt;/code&gt;&lt;br /&gt;
 因此只要将开头部分修改就好了，在命令行中输入：  &lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="err"&gt;$&lt;/span&gt; &lt;span class="n"&gt;sed&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="sc"&gt;&amp;#39; &amp;#39;&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;s!https://github.com/!git@github.com!g&amp;quot;&lt;/span&gt; &lt;span class="err"&gt;`&lt;/span&gt;&lt;span class="n"&gt;grep&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;rl&lt;/span&gt; &lt;span class="n"&gt;https&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="c1"&gt;//github.com/ workshop/*/.git/config`&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
+&lt;blockquote&gt;
+&lt;p&gt;&lt;code&gt;$ sed -i ' ' "s!https://github.com/!git@github.com!g" `grep -rl https://github.com/ workshop/*/.git/config`&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;p&gt;这次让我开眼界的是：
 1. &lt;code&gt;sed&lt;/code&gt;可以使用任何字符来作为分割符号，常用的是「&lt;code&gt;/&lt;/code&gt;」，但遇到「&lt;code&gt;/&lt;/code&gt;」时就得替换成其他字符，甚至可以用字母；&lt;br /&gt;
 2. &lt;code&gt;OS X&lt;/code&gt;下的&lt;code&gt;sed&lt;/code&gt;与&lt;code&gt;Linux&lt;/code&gt;下的不一样，使用了&lt;code&gt;-i&lt;/code&gt;的话是强制备份的，&lt;code&gt;man&lt;/code&gt;手册没有告诉你……&lt;br /&gt;
