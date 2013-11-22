@@ -84,11 +84,14 @@ Filed under <a href="http://blog.ryekee.com/category/tech.html">Tech</a>
 <code>url = https://github.com/[your_id]/[repo_name].git</code><br />
 修改后的是：<br />
 <code>url = git@github.com:[your_id]/[repo_name].git</code><br />
-因此只要将开头部分修改就好了，在命令行中输入：<br />
-<code>$ sed -i ' ' "s!https://github.com/!git@github.com!g" `grep -rl https://github.com/ workshop/*/.git/config`</code></p>
+因此只要将开头部分修改就好了，在命令行中输入：  </p>
+<div class="highlight"><pre><span class="err">$</span> <span class="n">sed</span> <span class="o">-</span><span class="n">i</span> <span class="sc">&#39; &#39;</span> <span class="s">&quot;s!https://github.com/!git@github.com!g&quot;</span> <span class="err">`</span><span class="n">grep</span> <span class="o">-</span><span class="n">rl</span> <span class="n">https</span><span class="o">:</span><span class="c1">//github.com/ workshop/*/.git/config`</span>
+</pre></div>
+
+
 <p>这次让我开眼界的是：
-1. <code>sed</code>可以使用任何字符来作为分割符号，常用「<code>/</code>」，但遇到「<code>/</code>」时就得替换成其他字符，甚至可以用字母；
-2. <code>OS X</code>下的<code>sed</code>与<code>Linux</code>下的不一样，使用了<code>-i</code>的话是强制备份的，<code>man</code>手册没有告诉你……
+1. <code>sed</code>可以使用任何字符来作为分割符号，常用的是「<code>/</code>」，但遇到「<code>/</code>」时就得替换成其他字符，甚至可以用字母；<br />
+2. <code>OS X</code>下的<code>sed</code>与<code>Linux</code>下的不一样，使用了<code>-i</code>的话是强制备份的，<code>man</code>手册没有告诉你……<br />
 3. 替换某行中的部分内容时，需要这样</p>
 	<hr />
       </div>
