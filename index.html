@@ -88,8 +88,10 @@ Filed under <a href="http://blog.ryekee.com/category/tech.html">Tech</a>
 <code>url = git@github.com:[your_id]/[repo_name].git</code><br />
 因此只要将开头部分修改就好了，使用<code>find</code>、<code>grep</code>和<code>sed</code>来修改。
 采用<code>find</code>来找到文件，用<code>grep</code>找到地方，最后用<code>sed</code>替换。<br />
-采用的命令是：<br />
-<code>$ find ~/workshop -exec grep "https://github.com/" '{}' \; -exec sed -i '' "s^https://github.com/^git@github.com:^g" {} \;</code></p>
+采用的命令是：  </p>
+<blockquote>
+<p><code>$ find ~/workshop -exec grep "https://github.com/" '{}' \; -exec sed -i '' "s^https://github.com/^git@github.com:^g" {} \;</code></p>
+</blockquote>
 <p>这次让我开眼界的是： <br />
 1. <code>sed</code>可以使用任何字符来作为分割符号，常用的是「<code>/</code>」，但遇到「<code>/</code>」时就得替换成其他字符，甚至可以用字母；<br />
 2. <code>OS X</code>下的<code>sed</code>与<code>Linux</code>下的不一样，使用了<code>-i</code>的话是强制备份的，<code>man</code>手册没有告诉你…… <br />
