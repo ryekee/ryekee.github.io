@@ -81,19 +81,21 @@ Filed under <a href="http://blog.ryekee.com/category/tech.html">Tech</a>
 <p>然后将<code>[remote "origin"]</code>标签下的<code>url</code>值改为：<br />
 <code>git@github.com:[your_id]/[repo_name].git</code>  </p>
 <h1>进阶解决</h1>
-<p>如果你有很多很多很多很多的库（像我这样），都需要改的话，怎么办呢？一个个打开然后编辑么？清醒点哥哥，你是程序员啊！有点尊严好么！这时就要用到一些<code>shell</code>脚本了。<br />
+<p>如果你有很多很多很多很多的库（像我这样），都需要改的话，怎么办呢？一个个打开然后编辑么？清醒点哥哥，你是程序员啊！有点尊严好么！ <br />
 如果你改的时候注意了一下<code>url</code>的值，你就会发现其实只不过修改了开头的部分而已。原先的为：<br />
 <code>url = https://github.com/[your_id]/[repo_name].git</code><br />
 修改后的是：<br />
 <code>url = git@github.com:[your_id]/[repo_name].git</code><br />
-因此只要将开头部分修改就好了，在命令行中输入：  </p>
-<blockquote>
-<p><code>$ sed -i ' ' "s!https://github.com/!git@github.com!g" `grep -rl https://github.com/ workshop/*/.git/config`</code></p>
-</blockquote>
-<p>这次让我开眼界的是：
+因此只要将开头部分修改就好了，使用<code>find</code>、<code>grep</code>和<code>sed</code>来修改。
+采用<code>find</code>来找到文件，用<code>grep</code>找到地方，最后用<code>sed</code>替换。<br />
+采用的命令是：<br />
+<code>$ find ~/workshop -exec grep "https://github.com/" '{}' \; -exec sed -i '' "s^https://github.com/^git@github.com:^g" {} \;</code></p>
+<p>这次让我开眼界的是： <br />
 1. <code>sed</code>可以使用任何字符来作为分割符号，常用的是「<code>/</code>」，但遇到「<code>/</code>」时就得替换成其他字符，甚至可以用字母；<br />
-2. <code>OS X</code>下的<code>sed</code>与<code>Linux</code>下的不一样，使用了<code>-i</code>的话是强制备份的，<code>man</code>手册没有告诉你……<br />
-3. 替换某行中的部分内容时，需要这样</p> 
+2. <code>OS X</code>下的<code>sed</code>与<code>Linux</code>下的不一样，使用了<code>-i</code>的话是强制备份的，<code>man</code>手册没有告诉你…… <br />
+3. 命令行真好用……  </p>
+<h3>参考</h3>
+<p><a href="http://www.yayu.org/look.php?id=174">利用find和sed批量替换文件内容</a></p> 
 	<a class="btn btn-mini xsmall" href="http://blog.ryekee.com/git-config-from-https-to-ssh.html">
           <i class="icon-comment"></i> Comment </a>
 	<hr />

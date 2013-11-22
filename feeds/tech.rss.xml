@@ -11,19 +11,21 @@
 &lt;p&gt;然后将&lt;code&gt;[remote "origin"]&lt;/code&gt;标签下的&lt;code&gt;url&lt;/code&gt;值改为：&lt;br /&gt;
 &lt;code&gt;git@github.com:[your_id]/[repo_name].git&lt;/code&gt;  &lt;/p&gt;
 &lt;h1&gt;进阶解决&lt;/h1&gt;
-&lt;p&gt;如果你有很多很多很多很多的库（像我这样），都需要改的话，怎么办呢？一个个打开然后编辑么？清醒点哥哥，你是程序员啊！有点尊严好么！这时就要用到一些&lt;code&gt;shell&lt;/code&gt;脚本了。&lt;br /&gt;
+&lt;p&gt;如果你有很多很多很多很多的库（像我这样），都需要改的话，怎么办呢？一个个打开然后编辑么？清醒点哥哥，你是程序员啊！有点尊严好么！ &lt;br /&gt;
 如果你改的时候注意了一下&lt;code&gt;url&lt;/code&gt;的值，你就会发现其实只不过修改了开头的部分而已。原先的为：&lt;br /&gt;
 &lt;code&gt;url = https://github.com/[your_id]/[repo_name].git&lt;/code&gt;&lt;br /&gt;
 修改后的是：&lt;br /&gt;
 &lt;code&gt;url = git@github.com:[your_id]/[repo_name].git&lt;/code&gt;&lt;br /&gt;
-因此只要将开头部分修改就好了，在命令行中输入：  &lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;code&gt;$ sed -i ' ' "s!https://github.com/!git@github.com!g" `grep -rl https://github.com/ workshop/*/.git/config`&lt;/code&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;这次让我开眼界的是：
+因此只要将开头部分修改就好了，使用&lt;code&gt;find&lt;/code&gt;、&lt;code&gt;grep&lt;/code&gt;和&lt;code&gt;sed&lt;/code&gt;来修改。
+采用&lt;code&gt;find&lt;/code&gt;来找到文件，用&lt;code&gt;grep&lt;/code&gt;找到地方，最后用&lt;code&gt;sed&lt;/code&gt;替换。&lt;br /&gt;
+采用的命令是：&lt;br /&gt;
+&lt;code&gt;$ find ~/workshop -exec grep "https://github.com/" '{}' \; -exec sed -i '' "s^https://github.com/^git@github.com:^g" {} \;&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;这次让我开眼界的是： &lt;br /&gt;
 1. &lt;code&gt;sed&lt;/code&gt;可以使用任何字符来作为分割符号，常用的是「&lt;code&gt;/&lt;/code&gt;」，但遇到「&lt;code&gt;/&lt;/code&gt;」时就得替换成其他字符，甚至可以用字母；&lt;br /&gt;
-2. &lt;code&gt;OS X&lt;/code&gt;下的&lt;code&gt;sed&lt;/code&gt;与&lt;code&gt;Linux&lt;/code&gt;下的不一样，使用了&lt;code&gt;-i&lt;/code&gt;的话是强制备份的，&lt;code&gt;man&lt;/code&gt;手册没有告诉你……&lt;br /&gt;
-3. 替换某行中的部分内容时，需要这样&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Ryekee</dc:creator><pubDate>Thu, 21 Nov 2013 20:20:00 +0800</pubDate><guid>tag:blog.ryekee.com,2013-11-21:git-config-from-https-to-ssh.html</guid><category>git</category><category>github</category><category>shell</category><category>ssh</category><category>https</category></item><item><title>字体渲染背后不得不说的故事</title><link>http://blog.ryekee.com/font-rendering.html</link><description>&lt;p&gt;&lt;em&gt;&lt;a href="http://ryekee.com"&gt;@Ryekee&lt;/a&gt;：最近在看关于字体渲染技术的时候在&lt;a href="http://www.smashingmagazine.com"&gt;SmashingMagazine&lt;/a&gt;上看到了&lt;a href="http://www.smashingmagazine.com/2012/04/24/a-closer-look-at-font-rendering/"&gt;这篇文章&lt;/a&gt;，觉得算是对 Windows、MacOS 以及 iOS上渲染技术说的比较详细的了，就翻译成了中文，同步更新于&lt;a href="http://ryekee.com/2013/font-rendering"&gt;Ryekee_Blog&lt;/a&gt;和&lt;a href="http://blog.ryekee.com/font-rendering.html"&gt;localhost/Ryekee&lt;/a&gt;。有任何错误或者不当的翻译欢迎指出。:-)&lt;/em&gt;   &lt;/p&gt;
+2. &lt;code&gt;OS X&lt;/code&gt;下的&lt;code&gt;sed&lt;/code&gt;与&lt;code&gt;Linux&lt;/code&gt;下的不一样，使用了&lt;code&gt;-i&lt;/code&gt;的话是强制备份的，&lt;code&gt;man&lt;/code&gt;手册没有告诉你…… &lt;br /&gt;
+3. 命令行真好用……  &lt;/p&gt;
+&lt;h3&gt;参考&lt;/h3&gt;
+&lt;p&gt;&lt;a href="http://www.yayu.org/look.php?id=174"&gt;利用find和sed批量替换文件内容&lt;/a&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Ryekee</dc:creator><pubDate>Thu, 21 Nov 2013 20:20:00 +0800</pubDate><guid>tag:blog.ryekee.com,2013-11-21:git-config-from-https-to-ssh.html</guid><category>git</category><category>github</category><category>shell</category><category>ssh</category><category>https</category></item><item><title>字体渲染背后不得不说的故事</title><link>http://blog.ryekee.com/font-rendering.html</link><description>&lt;p&gt;&lt;em&gt;&lt;a href="http://ryekee.com"&gt;@Ryekee&lt;/a&gt;：最近在看关于字体渲染技术的时候在&lt;a href="http://www.smashingmagazine.com"&gt;SmashingMagazine&lt;/a&gt;上看到了&lt;a href="http://www.smashingmagazine.com/2012/04/24/a-closer-look-at-font-rendering/"&gt;这篇文章&lt;/a&gt;，觉得算是对 Windows、MacOS 以及 iOS上渲染技术说的比较详细的了，就翻译成了中文，同步更新于&lt;a href="http://ryekee.com/2013/font-rendering"&gt;Ryekee_Blog&lt;/a&gt;和&lt;a href="http://blog.ryekee.com/font-rendering.html"&gt;localhost/Ryekee&lt;/a&gt;。有任何错误或者不当的翻译欢迎指出。:-)&lt;/em&gt;   &lt;/p&gt;
 &lt;p&gt;在&lt;code&gt;Mac OS&lt;/code&gt;的Finder下或者网页（随便什么浏览器）中对文本截屏，之后对图片放大放大不断放大，就可以看到下图所示这样奇怪的东西了。为什么纯黑圆滑优美可爱的字体放大之后会有奇怪的颜色出现呢？这背后又有什么神奇的奥秘呢？欢迎来到本期「走进科学」之字体渲染的奥秘。 &lt;br /&gt;
 &lt;img alt="Font rendering on Mac OS Finder" src="http://farm6.staticflickr.com/5529/10743683394_639a46e4fd_o.jpg" /&gt;&lt;!--0--&gt;    &lt;/p&gt;
 &lt;h1&gt;引言&lt;/h1&gt;
