@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>localhost/Ryekee</title><link href="http://blog.ryekee.com/" rel="alternate"></link><link href="http://blog.ryekee.com/feeds/tech.atom.xml" rel="self"></link><id>http://blog.ryekee.com/</id><updated>2013-11-21T20:20:00+08:00</updated><entry><title>批量替换文件内容</title><link href="http://blog.ryekee.com/replace-file-content-by-batch.html" rel="alternate"></link><updated>2013-11-21T20:20:00+08:00</updated><author><name>Ryekee</name></author><id>tag:blog.ryekee.com,2013-11-21:replace-file-content-by-batch.html</id><summary type="html">&lt;h1&gt;起因&lt;/h1&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>localhost/Ryekee</title><link href="http://blog.ryekee.com/" rel="alternate"></link><link href="http://blog.ryekee.com/feeds/tech.atom.xml" rel="self"></link><id>http://blog.ryekee.com/</id><updated>2013-11-25T12:13:00+08:00</updated><entry><title>批量替换文件内容</title><link href="http://blog.ryekee.com/replace-file-content-by-batch.html" rel="alternate"></link><updated>2013-11-25T12:13:00+08:00</updated><author><name>Ryekee</name></author><id>tag:blog.ryekee.com,2013-11-25:replace-file-content-by-batch.html</id><summary type="html">&lt;h1&gt;起因&lt;/h1&gt;
 &lt;p&gt;昨天在邮件列表看到说有人的&lt;code&gt;Github&lt;/code&gt;帐号被暴力破解了，应该就是之前的Ripple送币惹的祸。尽管我的&lt;code&gt;Github&lt;/code&gt;密码复杂度不怕暴力破解，但还是去设置中开启了&lt;a href="https://github.com/settings/admin"&gt;二次验证&lt;/a&gt;。于是下午想提交commit的时候就喜闻乐见的告诉我被denied了，查了查都说改成SSH的方式同步可以解决，那好吧那好吧，you little bad boy my github...  &lt;/p&gt;
 &lt;h1&gt;解决&lt;/h1&gt;
 &lt;p&gt;解决方案很简单，在你的&lt;code&gt;repo&lt;/code&gt;的目录下，输入：  &lt;/p&gt;
@@ -18,10 +18,8 @@
 &lt;code&gt;url = git@github.com:[your_id]/[repo_name].git&lt;/code&gt;&lt;br /&gt;
 因此只要将开头部分修改就好了，使用&lt;code&gt;find&lt;/code&gt;、&lt;code&gt;grep&lt;/code&gt;和&lt;code&gt;sed&lt;/code&gt;来修改。
 采用&lt;code&gt;find&lt;/code&gt;来找到文件，用&lt;code&gt;grep&lt;/code&gt;找到地方，最后用&lt;code&gt;sed&lt;/code&gt;替换。&lt;br /&gt;
-采用的命令是：  &lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;code&gt;$ find ~/workshop -exec grep "https://github.com/" '{}' \; -exec sed -i '' "s^https://github.com/^git@github.com:^g" {} \;&lt;/code&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
+采用的命令是：&lt;br /&gt;
+&lt;code&gt;$ find ~/workshop -exec grep "https://github.com/" '{}' \; -exec sed -i '' "s^https://github.com/^git@github.com:^g" {} \;&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;这次让我开眼界的是： &lt;br /&gt;
 1. &lt;code&gt;sed&lt;/code&gt;可以使用任何字符来作为分割符号，常用的是「&lt;code&gt;/&lt;/code&gt;」，但遇到「&lt;code&gt;/&lt;/code&gt;」时就得替换成其他字符，甚至可以用字母；&lt;br /&gt;
 2. &lt;code&gt;OS X&lt;/code&gt;下的&lt;code&gt;sed&lt;/code&gt;与&lt;code&gt;Linux&lt;/code&gt;下的不一样，使用了&lt;code&gt;-i&lt;/code&gt;的话是强制备份的，&lt;code&gt;man&lt;/code&gt;手册没有告诉你…… &lt;br /&gt;
