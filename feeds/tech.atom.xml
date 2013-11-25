@@ -1,5 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>localhost/Ryekee</title><link href="http://blog.ryekee.com/" rel="alternate"></link><link href="http://blog.ryekee.com/feeds/tech.atom.xml" rel="self"></link><id>http://blog.ryekee.com/</id><updated>2013-11-25T12:13:00+08:00</updated><entry><title>批量替换文件内容</title><link href="http://blog.ryekee.com/replace-file-content-by-batch.html" rel="alternate"></link><updated>2013-11-25T12:13:00+08:00</updated><author><name>Ryekee</name></author><id>tag:blog.ryekee.com,2013-11-25:replace-file-content-by-batch.html</id><summary type="html">&lt;h1&gt;起因&lt;/h1&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>localhost/Ryekee</title><link href="http://blog.ryekee.com/" rel="alternate"></link><link href="http://blog.ryekee.com/feeds/tech.atom.xml" rel="self"></link><id>http://blog.ryekee.com/</id><updated>2013-11-25T16:38:00+08:00</updated><entry><title>和Chrome新版标签页说再见</title><link href="http://blog.ryekee.com/fuck-instant-extended-api.html" rel="alternate"></link><updated>2013-11-25T16:38:00+08:00</updated><author><name>Ryekee</name></author><id>tag:blog.ryekee.com,2013-11-25:fuck-instant-extended-api.html</id><summary type="html">&lt;h1&gt;起因&lt;/h1&gt;
+&lt;p&gt;Chrome 不懂从哪个版本号开始使用了新版的新标签页，简直sucks到爆，常用的App被缩到书签栏一个小小的图标去了，搜索栏输入光标马上就跑到地址栏去了，为了KPI是么……&lt;/p&gt;
+&lt;h1&gt;解决&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;地址栏输入&lt;code&gt;chrome://flags&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;搜索&lt;code&gt;Instant Extended API&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;停用它&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;strong&gt;世界一下美好了&lt;/strong&gt;&lt;/p&gt;</summary><category term="chrome"></category></entry><entry><title>批量替换文件内容</title><link href="http://blog.ryekee.com/replace-file-content-by-batch.html" rel="alternate"></link><updated>2013-11-25T12:13:00+08:00</updated><author><name>Ryekee</name></author><id>tag:blog.ryekee.com,2013-11-25:replace-file-content-by-batch.html</id><summary type="html">&lt;h1&gt;起因&lt;/h1&gt;
 &lt;p&gt;昨天在邮件列表看到说有人的&lt;code&gt;Github&lt;/code&gt;帐号被暴力破解了，应该就是之前的Ripple送币惹的祸。尽管我的&lt;code&gt;Github&lt;/code&gt;密码复杂度不怕暴力破解，但还是去设置中开启了&lt;a href="https://github.com/settings/admin"&gt;二次验证&lt;/a&gt;。于是下午想提交commit的时候就喜闻乐见的告诉我被denied了，查了查都说改成SSH的方式同步可以解决，那好吧那好吧，you little bad boy my github...  &lt;/p&gt;
 &lt;h1&gt;解决&lt;/h1&gt;
 &lt;p&gt;解决方案很简单，在你的&lt;code&gt;repo&lt;/code&gt;的目录下，输入：  &lt;/p&gt;
