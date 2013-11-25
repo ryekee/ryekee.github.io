@@ -1,5 +1,5 @@
 title: 批量替换文件内容  
-date: 2013-11-21 20:20  
+date: 2013-11-25 12:13      
 tags: git, github, shell, ssh, https, find, sed, grep  
 author: Ryekee  
 slug: replace-file-content-by-batch  
@@ -25,8 +25,7 @@ $ vim config
 因此只要将开头部分修改就好了，使用`find`、`grep`和`sed`来修改。
 采用`find`来找到文件，用`grep`找到地方，最后用`sed`替换。  
 采用的命令是：  
-    ```$ find ~/workshop -exec grep "https://github.com/" '{}' \; -exec sed -i '' "s^https://github.com/^git@github.com:^g" {} \;  
-    ```
+    ```$ find ~/workshop -exec grep "https://github.com/" '{}' \; -exec sed -i '' "s^https://github.com/^git@github.com:^g" {} \;  ```
 
 
 这次让我开眼界的是：   
