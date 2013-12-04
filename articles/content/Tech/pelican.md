@@ -1,7 +1,6 @@
 title: 使用Pelican搭建静态Blog  
 date: 2013-10-30 10:35  
 tags: geek, blog, pelican  
-category: Geek
 author: Ryekee  
 slug: guidebook-to-pelican  
 
