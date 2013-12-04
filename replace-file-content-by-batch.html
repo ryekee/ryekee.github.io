@@ -1,112 +1,51 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:og="http://ogp.me/ns#"
-      xmlns:fb="https://www.facebook.com/2008/fbml">
+<html lang="en">
 <head>
-    <title>批量替换文件内容</title>
-    <!-- Using the latest rendering mode for IE -->
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>批量替换文件内容</title>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="http://blog.ryekee.com/theme/css/main.css" type="text/css" />
+   
 
-    <!-- Open Graph tags -->
+        <!--[if IE]>
+                <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 
-            <meta property="og:type" content="article"/>
-            <meta property="og:title" content="批量替换文件内容"/>
-            <meta property="og:url" content="http://blog.ryekee.com/replace-file-content-by-batch.html"/>
-            <meta property="og:description" content="起因 昨天在邮件列表看到说有人的Github帐号被暴力破解了，应该就是之前的Ripple送币惹的祸。尽管我的Github密码复杂度不怕暴力破解，但还是去设置中开启了二次验证。于是下午想提交commit的时候就喜闻乐见的告诉我被denied了，查了查都说改成SSH的方式同步可以解决，那好吧那好吧，you little bad boy my github... 解决 解决方案很简单，在你的repo的目录下，输入： $ cd .git $ vim config 然后将[remote "origin"]标签下的url值改为： git@github.com:[your_id]/[repo_name].git 进阶解决 如果你有很多很多很多很多的库（像我这样），都需要改的话，怎么办呢？一个个打开然后编辑么？清醒点哥哥，你是程序员啊！有点尊严好么 ..."/>
+        <!--[if lte IE 7]>
+                <link rel="stylesheet" type="text/css" media="all" href="http://blog.ryekee.com/css/ie.css"/>
+                <script src="http://blog.ryekee.com/js/IE8.js" type="text/javascript"></script><![endif]-->
 
-    <!-- Bootstrap -->
-        <link rel="stylesheet" href="http://blog.ryekee.com/theme/css/bootstrap.min.css" type="text/css"/>
-    <link href="http://blog.ryekee.com/theme/css/font-awesome.min.css" rel="stylesheet">
-    <link href="http://blog.ryekee.com/theme/css/bootstrap-glyphicons.css" rel="stylesheet">
-    <link href="http://blog.ryekee.com/theme/css/pygments.css" rel="stylesheet">
-    <link rel="stylesheet" href="http://blog.ryekee.com/theme/css/style.css" type="text/css"/>
-    <!-- JavaScript plugins (requires jQuery) -->
-    <script src="http://code.jquery.com/jquery.js"></script>
-
-        <link href="http://blog.ryekee.com/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
-              title="localhost/Ryekee ATOM Feed"/>
-        <link href="http://blog.ryekee.com/feeds/all.rss.xml" type="application/atom+xml" rel="alternate"
-              title="localhost/Ryekee RSS Feed"/>
+        <!--[if lt IE 7]>
+                <link rel="stylesheet" type="text/css" media="all" href="http://blog.ryekee.com/css/ie6.css"/><![endif]-->
 
 </head>
-<body>
-<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-    <div class="container">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a href="http://blog.ryekee.com" class="navbar-brand">localhost/Ryekee</a>
-        </div>
-        <div class="collapse navbar-collapse navbar-ex1-collapse">
-            <ul class="nav navbar-nav">
-                        <li >
-                            <a href="http://blog.ryekee.com/category/about.html">About</a>
-                        </li>
-                        <li >
-                            <a href="http://blog.ryekee.com/category/other.html">Other</a>
-                        </li>
-                        <li class="active">
-                            <a href="http://blog.ryekee.com/category/tech.html">Tech</a>
-                        </li>
-            </ul>
-            <ul class="nav navbar-nav navbar-right">
-                <li><a href="http://blog.ryekee.com/archives.html"><i class="icon-th-list"></i>Archives</a></li>
-            </ul>
-        </div>
-        <!-- /.navbar-collapse -->
-    </div>
-</nav>
-<!-- /.navbar -->
-<div class="container">
-    <div class="row">
-        <div class="col-lg-9">
-    <section id="content">
-        <article>
-            <header class="page-header">
-                <h1>
-                    <a href="http://blog.ryekee.com/replace-file-content-by-batch.html"
-                       rel="bookmark"
-                       title="Permalink to 批量替换文件内容">
-                        批量替换文件内容
-                    </a>
-                </h1>
-            </header>
-            <div class="entry-content">
-                <div class="panel">
-                    <div class="panel-body">
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="http://blog.ryekee.com">localhost/Ryekee  <strong>我们生来就是要吹牛逼的</strong></a></h1>
+                <nav><ul>
+                    <li ><a href="http://blog.ryekee.com/category/about.html">About</a></li>
+                    <li ><a href="http://blog.ryekee.com/category/other.html">Other</a></li>
+                    <li class="active"><a href="http://blog.ryekee.com/category/tech.html">Tech</a></li>
+                </ul></nav>
+        </header><!-- /#banner -->
+<section id="content" class="body">
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="replace-file-content-by-batch.html" rel="bookmark"
+           title="Permalink to 批量替换文件内容">批量替换文件内容</a></h1>
+    </header>
+
+    <div class="entry-content">
 <footer class="post-info">
-    <span class="label label-default">Date</span>
-    <span class="published">
-        <i class="icon-calendar"></i>一 25 十一月 2013
-    </span>
+        <abbr class="published" title="2013-11-25T12:13:00">
+                一 25 十一月 2013
+        </abbr>
 
-
-
-<span class="label label-default">Tags</span>
-	<a href="http://blog.ryekee.com/tag/git.html">git</a>
-        /
-	<a href="http://blog.ryekee.com/tag/github.html">github</a>
-        /
-	<a href="http://blog.ryekee.com/tag/shell.html">shell</a>
-        /
-	<a href="http://blog.ryekee.com/tag/ssh.html">ssh</a>
-        /
-	<a href="http://blog.ryekee.com/tag/https.html">https</a>
-        /
-	<a href="http://blog.ryekee.com/tag/find.html">find</a>
-        /
-	<a href="http://blog.ryekee.com/tag/sed.html">sed</a>
-        /
-	<a href="http://blog.ryekee.com/tag/grep.html">grep</a>
-</footer><!-- /.post-info -->                    </div>
-                </div>
-                <h1>起因</h1>
+        <address class="vcard author">
+                By <a class="url fn" href="http://blog.ryekee.com/author/ryekee.html">Ryekee</a>
+        </address>
+<p>In <a href="http://blog.ryekee.com/category/tech.html">Tech</a>. </p>
+<p>tags: <a href="http://blog.ryekee.com/tag/git.html">git</a><a href="http://blog.ryekee.com/tag/github.html">github</a><a href="http://blog.ryekee.com/tag/shell.html">shell</a><a href="http://blog.ryekee.com/tag/ssh.html">ssh</a><a href="http://blog.ryekee.com/tag/https.html">https</a><a href="http://blog.ryekee.com/tag/find.html">find</a><a href="http://blog.ryekee.com/tag/sed.html">sed</a><a href="http://blog.ryekee.com/tag/grep.html">grep</a></p></footer><!-- /.post-info -->      <h1>起因</h1>
 <p>昨天在邮件列表看到说有人的<code>Github</code>帐号被暴力破解了，应该就是之前的Ripple送币惹的祸。尽管我的<code>Github</code>密码复杂度不怕暴力破解，但还是去设置中开启了<a href="https://github.com/settings/admin">二次验证</a>。于是下午想提交commit的时候就喜闻乐见的告诉我被denied了，查了查都说改成SSH的方式同步可以解决，那好吧那好吧，you little bad boy my github...  </p>
 <h1>解决</h1>
 <p>解决方案很简单，在你的<code>repo</code>的目录下，输入：  </p>
@@ -133,152 +72,44 @@
 3. 命令行真好用……  </p>
 <h3>参考</h3>
 <p><a href="http://www.yayu.org/look.php?id=174">利用find和sed批量替换文件内容</a></p>
-            </div>
-            <!-- /.entry-content -->
-    <hr />
-    <section class="comments" id="comments">
-        <h2>Comments</h2>
-        <div id="disqus_thread"></div>
-        <script type="text/javascript">
-            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-            var disqus_shortname = 'ryekee'; // required: replace example with your forum shortname
-            var disqus_identifier = 'replace-file-content-by-batch';
-            var disqus_url = 'http://blog.ryekee.com/replace-file-content-by-batch.html';
-
-            /* * * DON'T EDIT BELOW THIS LINE * * */
-            (function () {
-                var dsq = document.createElement('script');
-                dsq.type = 'text/javascript';
-                dsq.async = true;
-                dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-            })();
-        </script>
-        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by
-            Disqus.</a></noscript>
-        <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-
-    </section>
-        </article>
-    </section>
-
-        </div>
-        <div class="col-lg-3 well well-sm" id="sidebar">
-<aside>
-    <section>
-        <ul class="list-group list-group-flush">
-
-
-
-            <li class="list-group-item"><a href="http://blog.ryekee.com/tags.html"><h4><i class="icon-tags icon-large"></i>Tags</h4></a></li>
-                <li class="list-group-item tag-1">
-                    <a href="http://blog.ryekee.com/tag/pelican.html">
-                        pelican
-                    </a>
-                </li>
-                <li class="list-group-item tag-2">
-                    <a href="http://blog.ryekee.com/tag/blog.html">
-                        blog
-                    </a>
-                </li>
-                <li class="list-group-item tag-2">
-                    <a href="http://blog.ryekee.com/tag/geek.html">
-                        geek
-                    </a>
-                </li>
-                <li class="list-group-item tag-4">
-                    <a href="http://blog.ryekee.com/tag/https.html">
-                        https
-                    </a>
-                </li>
-                <li class="list-group-item tag-4">
-                    <a href="http://blog.ryekee.com/tag/ssh.html">
-                        ssh
-                    </a>
-                </li>
-                <li class="list-group-item tag-4">
-                    <a href="http://blog.ryekee.com/tag/helloworld.html">
-                        helloworld
-                    </a>
-                </li>
-                <li class="list-group-item tag-4">
-                    <a href="http://blog.ryekee.com/tag/github.html">
-                        github
-                    </a>
-                </li>
-                <li class="list-group-item tag-4">
-                    <a href="http://blog.ryekee.com/tag/grep.html">
-                        grep
-                    </a>
-                </li>
-                <li class="list-group-item tag-4">
-                    <a href="http://blog.ryekee.com/tag/sed.html">
-                        sed
-                    </a>
-                </li>
-                <li class="list-group-item tag-4">
-                    <a href="http://blog.ryekee.com/tag/shell.html">
-                        shell
-                    </a>
-                </li>
-                <li class="list-group-item tag-4">
-                    <a href="http://blog.ryekee.com/tag/translation.html">
-                        translation
-                    </a>
-                </li>
-                <li class="list-group-item tag-4">
-                    <a href="http://blog.ryekee.com/tag/chrome.html">
-                        chrome
-                    </a>
-                </li>
-                <li class="list-group-item tag-4">
-                    <a href="http://blog.ryekee.com/tag/fonts.html">
-                        fonts
-                    </a>
-                </li>
-                <li class="list-group-item tag-4">
-                    <a href="http://blog.ryekee.com/tag/story.html">
-                        story
-                    </a>
-                </li>
-                <li class="list-group-item tag-4">
-                    <a href="http://blog.ryekee.com/tag/git.html">
-                        git
-                    </a>
-                </li>
-                <li class="list-group-item tag-4">
-                    <a href="http://blog.ryekee.com/tag/about.html">
-                        about
-                    </a>
-                </li>
-                <li class="list-group-item tag-4">
-                    <a href="http://blog.ryekee.com/tag/find.html">
-                        find
-                    </a>
-                </li>
-        </ul>
-    </section>
-</aside>        </div>
+    </div><!-- /.entry-content -->
+    <div class="comments">
+      <h2>Comments !</h2>
+      <div id="disqus_thread"></div>
+      <script type="text/javascript">
+        var disqus_identifier = "replace-file-content-by-batch.html";
+        (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://ryekee.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+      </script>
     </div>
-</div>
 
-<!-- Include all compiled plugins (below), or include individual files as needed -->
-<script src="http://blog.ryekee.com/theme/js/bootstrap.min.js"></script>
+  </article>
+</section>
+        <section id="extras" class="body">
+                <div class="blogroll">
+                        <h2>blogroll</h2>
+                        <ul>
+                            <li><a href="http://ryekee.com/">RyekeeBlog</a></li>
+                            <li><a href="http://aboutme.ryekee.com/">BIO</a></li>
+                        </ul>
+                </div><!-- /.blogroll -->
+        </section><!-- /#extras -->
 
-<!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
-<script src="http://blog.ryekee.com/theme/js/respond.min.js"></script>
-    <script type="text/javascript">
-        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-        var disqus_shortname = 'ryekee'; // required: replace example with your forum shortname
+        <footer id="contentinfo" class="body">
 
-        /* * * DON'T EDIT BELOW THIS LINE * * */
-        (function () {
-            var s = document.createElement('script');
-            s.async = true;
-            s.type = 'text/javascript';
-            s.src = '//' + disqus_shortname + '.disqus.com/count.js';
-            (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
-        }());
-    </script>
+        </footer><!-- /#contentinfo -->
+
+<script type="text/javascript">
+    var disqus_shortname = 'ryekee';
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = 'http://' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+</script>
 </body>
 </html>
