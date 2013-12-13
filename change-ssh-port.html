@@ -80,23 +80,23 @@ Filed under <a href="http://blog.ryekee.com/category/tech.html">Tech</a>
 <strong>请将「XXXX」换成你想要开启的端口号……</strong></p>
 <h3>2. 配置防火墙规则</h3>
 <p><code>$ vim /etc/iptables.firewall.rules</code><br />
-添加<code>-A INPUT -p tcp -m state --state NEW --dport XXXX -j ACCEPT</code> 
+添加<code>-A INPUT -p tcp -m state --state NEW --dport XXXX -j ACCEPT</code> <br />
 此处的「XXXX」需要与上一步相同</p>
 <h3>3. 使防火墙规则生效</h3>
 <p><code>$ iptables-restore &lt; /etc/iptables.firewall.rules</code><br />
 可以使用<code>iptables -L</code>命令查看是否生效</p>
 <h3>4. 登录</h3>
-<p><code>$ ssh [user]@[IP] -p XXXX</code><br />
-如果要用来科学上网的话，使用以下命令：<br />
+<p><code>$ ssh [user]@[IP] -p XXXX</code>  </p>
+<p>如果要用来科学上网的话，使用以下命令：<br />
 <code>$ ssh -qTfnN -CD 7070 [user]@[IP] -p XXXX</code> <br />
 <em>  -q 是静默模式，忽略对话和错误<br />
 </em>  -T 不占用本地 shell<br />
-<em>  -f 后台运行，并推荐带上-n<br />
-</em>  -n -f推荐的，不带也可以<br />
-<em>  -N 不执行远程命令<br />
-</em>  -C 启用压缩<br />
-<em>  -D 指定本地端口，7070可根据需求更改  <br />
-</em>  -p 指定远程端口，XXXX换成第一步的端口号</p>
+<em>  -f 后台运行，并推荐带上-n <br />
+</em>  -n -f推荐的，不带也可以 <br />
+<em>  -N 不执行远程命令 <br />
+</em>  -C 启用压缩 <br />
+<em>  -D 指定本地端口，7070可根据需求更改   <br />
+</em>  -p 指定远程端口，XXXX换成第一步的端口号  </p>
 	<hr />
       </div>
     </div>
