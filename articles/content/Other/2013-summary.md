@@ -36,16 +36,16 @@ Summary: 二〇一三年终总结
 * 推荐美剧：[*Breaking Bad*](http://www.imdb.com/title/tt0903747/)
 * 推荐电影：[*Cloud Atlas*](http://www.imdb.com/title/tt1371111/)
 * 推荐音乐：[夜空中最亮的星](http://music.douban.com/subject/6974122/)
-* 推荐VPS：[Linode](http://www.linode.com)
+* 推荐VPS：[Linode](https://www.linode.com/?r=91010fb4ac30c02ffd01339a36e6fb8b768d6365)
 * 推荐游戏：[Dumb Ways to Die](https://itunes.apple.com/us/app/dumb-ways-to-die/id639930688)
 
 
 
 年度数据：
 
-   * 共发出**1476**封邮件
-   * 写了**3651**行代码
-   * 写了**19816**字文章
+   * 共发出**1,476**封邮件
+   * 写了**3,651**行代码
+   * 写了**19,816**字文章
    * 爬过**2**次华山
    * 体重峰值达到**70**Kg
    * 发了**534**条微博（2012年数据1590）、**172**条校内状态、**65**个知乎回答
