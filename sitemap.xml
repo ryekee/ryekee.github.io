@@ -5,30 +5,37 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://blog.ryekee.com/index.html</loc>
-<lastmod>2014-01-01T00:34:34-00:00</lastmod>
+<lastmod>2014-01-05T16:07:33-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://blog.ryekee.com/archives.html</loc>
-<lastmod>2014-01-01T00:34:34-00:00</lastmod>
+<lastmod>2014-01-05T16:07:33-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://blog.ryekee.com/tags.html</loc>
-<lastmod>2014-01-01T00:34:34-00:00</lastmod>
+<lastmod>2014-01-05T16:07:33-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://blog.ryekee.com/categories.html</loc>
-<lastmod>2014-01-01T00:34:34-00:00</lastmod>
+<lastmod>2014-01-05T16:07:33-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
+</url>
+
+<url>
+<loc>http://blog.ryekee.com/talk-nonsense-about-fuckgfw.html</loc>
+<lastmod>2014-01-05T15:09:44-00:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.7</priority>
 </url>
 
 <url>
@@ -110,7 +117,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://blog.ryekee.com/category/other.html</loc>
-<lastmod>2013-12-28T04:00:00-00:00</lastmod>
+<lastmod>2014-01-05T15:09:44-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -118,6 +125,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>http://blog.ryekee.com/category/tech.html</loc>
 <lastmod>2013-12-13T21:01:00-00:00</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>http://blog.ryekee.com/tag/gfw.html</loc>
+<lastmod>2014-01-05T15:09:44-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -256,8 +270,15 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
+<loc>http://blog.ryekee.com/tag/talk.html</loc>
+<lastmod>2014-01-05T15:09:44-00:00</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
 <loc>http://blog.ryekee.com/author/ryekee.html</loc>
-<lastmod>2013-12-28T04:00:00-00:00</lastmod>
+<lastmod>2014-01-05T15:09:44-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
