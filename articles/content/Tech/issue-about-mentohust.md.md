@@ -13,10 +13,10 @@ Destination     Gateway   Genmask          Flags   Metric  Ref   Use   Iface
 115.155.44.0     *        255.255.255.0    U       0       0     0     eth1.1 
 192.168.1.0      *        255.255.255.0    U       0       0     0     wl0 
 ```
-使用以下命令添加一条route即可 
+使用以下命令添加一条route即可   
 `root@DreamBox:~# route add default gw 115.155.44.254`
 
- 结果如下所示： 
+ 结果如下所示：   
  
  ```
 root@DreamBox:~# route 
@@ -26,3 +26,4 @@ Destination     Gateway         Genmask          Flags   Metric  Ref   Use   Ifa
 192.168.1.0     *               255.255.255.0    U       0       0     0     wl0 
 default         115.155.44.254  0.0.0.0          UG      0       0     0     eth1.1
  ```
+ 

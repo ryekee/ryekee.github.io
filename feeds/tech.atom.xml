@@ -8,9 +8,9 @@
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;使用以下命令添加一条route即可 
+&lt;p&gt;使用以下命令添加一条route即可 &lt;br /&gt;
 &lt;code&gt;root@DreamBox:~# route add default gw 115.155.44.254&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;结果如下所示： &lt;/p&gt;
+&lt;p&gt;结果如下所示：   &lt;/p&gt;
 &lt;p&gt;&lt;code&gt;root@DreamBox:~# route 
 Kernel IP routing table
 Destination     Gateway         Genmask          Flags   Metric  Ref   Use   Iface 
