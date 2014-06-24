@@ -1,5 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>localhost/Ryekee</title><link href="http://blog.ryekee.com/" rel="alternate"></link><link href="http://blog.ryekee.com/feeds/tech.atom.xml" rel="self"></link><id>http://blog.ryekee.com/</id><updated>2013-12-13T21:01:00+08:00</updated><entry><title>为ssh添加端口</title><link href="http://blog.ryekee.com/change-ssh-port.html" rel="alternate"></link><updated>2013-12-13T21:01:00+08:00</updated><author><name>Ryekee</name></author><id>tag:blog.ryekee.com,2013-12-13:change-ssh-port.html</id><summary type="html">&lt;blockquote&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>localhost/Ryekee</title><link href="http://blog.ryekee.com/" rel="alternate"></link><link href="http://blog.ryekee.com/feeds/tech.atom.xml" rel="self"></link><id>http://blog.ryekee.com/</id><updated>2014-06-24T14:11:00+08:00</updated><entry><title>OpenWRT 下 mentohust 认证成功却无法上网</title><link href="http://blog.ryekee.com/issue-about-mentohust-under-openwrt.html" rel="alternate"></link><updated>2014-06-24T14:11:00+08:00</updated><author><name>Ryekee</name></author><id>tag:blog.ryekee.com,2014-06-24:issue-about-mentohust-under-openwrt.html</id><summary type="html">&lt;p&gt;如题，帮舍友在他的路由器上配置 mentohust，认证成功之后却又无法上网。 在终端输入&lt;code&gt;route&lt;/code&gt;指令才发现是少了条网关。 &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;root&lt;/span&gt;&lt;span class="err"&gt;@&lt;/span&gt;&lt;span class="n"&gt;DreamBox&lt;/span&gt;&lt;span class="o"&gt;:~&lt;/span&gt;&lt;span class="err"&gt;#&lt;/span&gt; &lt;span class="n"&gt;route&lt;/span&gt; 
+&lt;span class="n"&gt;Kernel&lt;/span&gt; &lt;span class="n"&gt;IP&lt;/span&gt; &lt;span class="n"&gt;routing&lt;/span&gt; &lt;span class="n"&gt;table&lt;/span&gt; 
+&lt;span class="n"&gt;Destination&lt;/span&gt;     &lt;span class="n"&gt;Gateway&lt;/span&gt;   &lt;span class="n"&gt;Genmask&lt;/span&gt;          &lt;span class="n"&gt;Flags&lt;/span&gt;   &lt;span class="n"&gt;Metric&lt;/span&gt;  &lt;span class="n"&gt;Ref&lt;/span&gt;   &lt;span class="n"&gt;Use&lt;/span&gt;   &lt;span class="n"&gt;Iface&lt;/span&gt;  
+&lt;span class="mf"&gt;115.155.44.0&lt;/span&gt;     &lt;span class="o"&gt;*&lt;/span&gt;        &lt;span class="mf"&gt;255.255.255.0&lt;/span&gt;    &lt;span class="n"&gt;U&lt;/span&gt;       &lt;span class="mi"&gt;0&lt;/span&gt;       &lt;span class="mi"&gt;0&lt;/span&gt;     &lt;span class="mi"&gt;0&lt;/span&gt;     &lt;span class="n"&gt;eth1&lt;/span&gt;&lt;span class="mf"&gt;.1&lt;/span&gt; 
+&lt;span class="mf"&gt;192.168.1.0&lt;/span&gt;      &lt;span class="o"&gt;*&lt;/span&gt;        &lt;span class="mf"&gt;255.255.255.0&lt;/span&gt;    &lt;span class="n"&gt;U&lt;/span&gt;       &lt;span class="mi"&gt;0&lt;/span&gt;       &lt;span class="mi"&gt;0&lt;/span&gt;     &lt;span class="mi"&gt;0&lt;/span&gt;     &lt;span class="n"&gt;wl0&lt;/span&gt; 
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;使用以下命令添加一条route即可 
+&lt;code&gt;root@DreamBox:~# route add default gw 115.155.44.254&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;结果如下所示： &lt;/p&gt;
+&lt;p&gt;&lt;code&gt;root@DreamBox:~# route 
+Kernel IP routing table
+Destination     Gateway         Genmask          Flags   Metric  Ref   Use   Iface 
+115.155.44.0    *               255.255.255.0    U       0       0     0     eth1.1 
+192.168.1.0     *               255.255.255.0    U       0       0     0     wl0 
+default         115.155.44.254  0.0.0.0          UG      0       0     0     eth1.1&lt;/code&gt;&lt;/p&gt;</summary><category term="openwrt"></category><category term="mentohust"></category><category term="西电"></category><category term="锐捷"></category></entry><entry><title>为ssh添加端口</title><link href="http://blog.ryekee.com/change-ssh-port.html" rel="alternate"></link><updated>2013-12-13T21:01:00+08:00</updated><author><name>Ryekee</name></author><id>tag:blog.ryekee.com,2013-12-13:change-ssh-port.html</id><summary type="html">&lt;blockquote&gt;
 &lt;p&gt;众所周知，22端口用来翻墙的话，流量一大就很容易被长城扫到，所以最好是使用一个大号码的端口，而我一直保持着过去的坏习惯，以至于有了自己的服务器还是用着22端口。今天在&lt;a href="https://groups.google.com/forum/?hl=zh-CN#!topic/xidian_linux/iudCBhII4dA"&gt;邮件列表&lt;/a&gt;的里看到&lt;a href="https://twitter.com/ctqy"&gt;@CTQY&lt;/a&gt;的提醒才反应过来赶紧开了一个专用端口。记录一下，当作笔记。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;环境：Ubuntu 12.04  &lt;/p&gt;
