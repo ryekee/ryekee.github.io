@@ -30,11 +30,7 @@
 &lt;p&gt;上面的图片是我将两个 actions 整合到了一个 action 里，点击&lt;a href="http://launchcenterpro.com/kfbxdj"&gt;链接&lt;/a&gt;安装。安装至 LCP 后&lt;strong&gt;请修改 URL 中的 Twitter ID。&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Twitter &amp;amp; Facebook &amp;amp; Google+&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;LCP 中的 action URL（同上，&lt;strong&gt;更换 Ryekee 为你的 Twitter ID&lt;/strong&gt;）：&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;launch://x-callback-url/clipboard?text=[prompt-return:Post]  
-                &amp;amp;x-success={{drafts://x-callback-url/create?text={{||clipboard||}}&amp;amp;action={{Post to Google+}}&amp;amp;afterSuccess=Delete  
-                &amp;amp;x-success={{drafts://x-callback-url/create?text={{||clipboard||}}&amp;amp;action={{Post to Facebook}}&amp;amp;afterSuccess=Delete  
-                &amp;amp;x-success={{drafts://x-callback-url/create?text={{||clipboard||}}&amp;amp;action={{Tweet: Ryekee}}&amp;amp;afterSuccess=Delete}}}}}}  
-                &amp;amp;lc-icon=drafts&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;launch://x-callback-url/clipboard?text=[prompt-return:Post]&amp;amp;x-success={{drafts://x-callback-url/create?text={{||clipboard||}}&amp;amp;action={{Post to Google+}}&amp;amp;afterSuccess=Delete&amp;amp;x-success={{drafts://x-callback-url/create?text={{||clipboard||}}&amp;amp;action={{Post to Facebook}}&amp;amp;afterSuccess=Delete&amp;amp;x-success={{drafts://x-callback-url/create?text={{||clipboard||}}&amp;amp;action={{Tweet: Ryekee}}&amp;amp;afterSuccess=Delete}}}}}}&amp;amp;lc-icon=drafts&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;Draft 需要激活 Twitter、Facebook 和 G+ 的 URL Action    &lt;/p&gt;
 &lt;h2&gt;四、选择搜索引擎搜索（LCP + Safari）&lt;/h2&gt;
 &lt;p&gt;&lt;img alt="选择搜索引擎" src="http://me.ryekee.com/wp-content/uploads/2014/09/2014-09-03-2350.jpg" /&gt;&lt;/p&gt;

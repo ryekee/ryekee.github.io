@@ -82,11 +82,7 @@ LCP 中的 action URL：
 
 LCP 中的 action URL（同上，**更换 Ryekee 为你的 Twitter ID**）：
 
-```launch://x-callback-url/clipboard?text=[prompt-return:Post]  
-                &x-success={{drafts://x-callback-url/create?text={{||clipboard||}}&action={{Post to Google+}}&afterSuccess=Delete  
-                &x-success={{drafts://x-callback-url/create?text={{||clipboard||}}&action={{Post to Facebook}}&afterSuccess=Delete  
-                &x-success={{drafts://x-callback-url/create?text={{||clipboard||}}&action={{Tweet: Ryekee}}&afterSuccess=Delete}}}}}}  
-                &lc-icon=drafts```
+```launch://x-callback-url/clipboard?text=[prompt-return:Post]&x-success={{drafts://x-callback-url/create?text={{||clipboard||}}&action={{Post to Google+}}&afterSuccess=Delete&x-success={{drafts://x-callback-url/create?text={{||clipboard||}}&action={{Post to Facebook}}&afterSuccess=Delete&x-success={{drafts://x-callback-url/create?text={{||clipboard||}}&action={{Tweet: Ryekee}}&afterSuccess=Delete}}}}}}&lc-icon=drafts```
 
 Draft 需要激活 Twitter、Facebook 和 G+ 的 URL Action    
 
