@@ -30,34 +30,21 @@
 &lt;p&gt;上面的图片是我将两个 actions 整合到了一个 action 里，点击&lt;a href="http://launchcenterpro.com/kfbxdj"&gt;链接&lt;/a&gt;安装。安装至 LCP 后&lt;strong&gt;请修改 URL 中的 Twitter ID。&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Twitter &amp;amp; Facebook &amp;amp; Google+&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;LCP 中的 action URL（同上，&lt;strong&gt;更换 Ryekee 为你的 Twitter ID&lt;/strong&gt;）：&lt;/p&gt;
-&lt;p&gt;```launch://x-callback-url/clipboard?text=[prompt-return:Post]&lt;br /&gt;
-                &amp;amp;x-success={{drafts://x-callback-url/create?text={{||clipboard||}}&amp;amp;action={{Post to Google+}}&amp;amp;afterSuccess=Delete&lt;br /&gt;
-                &amp;amp;x-success={{drafts://x-callback-url/create?text={{||clipboard||}}&amp;amp;action={{Post to Facebook}}&amp;amp;afterSuccess=Delete&lt;br /&gt;
-                &amp;amp;x-success={{drafts://x-callback-url/create?text={{||clipboard||}}&amp;amp;action={{Tweet: Ryekee}}&amp;amp;afterSuccess=Delete}}}}}}&lt;br /&gt;
-                &amp;amp;lc-icon=drafts&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;Draft&lt;/span&gt; &lt;span class="err"&gt;需要激活&lt;/span&gt; &lt;span class="n"&gt;Twitter&lt;/span&gt;&lt;span class="err"&gt;、&lt;/span&gt;&lt;span class="n"&gt;Facebook&lt;/span&gt; &lt;span class="err"&gt;和&lt;/span&gt; &lt;span class="n"&gt;G&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="err"&gt;的&lt;/span&gt; &lt;span class="n"&gt;URL&lt;/span&gt; &lt;span class="n"&gt;Action&lt;/span&gt;
-
-
-
-
-
-
-&lt;span class="cp"&gt;## 四、选择搜索引擎搜索（LCP + Safari）&lt;/span&gt;
-
-&lt;span class="o"&gt;!&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="err"&gt;选择搜索引擎&lt;/span&gt;&lt;span class="p"&gt;](&lt;/span&gt;&lt;span class="n"&gt;http&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="c1"&gt;//me.ryekee.com/wp-content/uploads/2014/09/2014-09-03-2350.jpg)&lt;/span&gt;
-
-&lt;span class="err"&gt;众所周知的原因，在国内使用&lt;/span&gt; &lt;span class="n"&gt;Google&lt;/span&gt; &lt;span class="err"&gt;搜索体验十分糟糕，因此在使用&lt;/span&gt; &lt;span class="n"&gt;Safari&lt;/span&gt; &lt;span class="err"&gt;直接搜索时还需要点击跳转至谷歌香港才能得到搜索结果。而若是将默认搜索引擎设为&lt;/span&gt; &lt;span class="n"&gt;Bing&lt;/span&gt; &lt;span class="err"&gt;或者&lt;/span&gt; &lt;span class="n"&gt;Yahoo&lt;/span&gt; &lt;span class="err"&gt;就更差了。使用&lt;/span&gt; &lt;span class="n"&gt;VPN&lt;/span&gt; &lt;span class="err"&gt;可以解决这个问题，但不是时时都开着&lt;/span&gt; &lt;span class="n"&gt;VPN&lt;/span&gt; &lt;span class="err"&gt;的（我使用&lt;/span&gt; &lt;span class="n"&gt;APNP&lt;/span&gt; &lt;span class="err"&gt;和&lt;/span&gt; &lt;span class="n"&gt;AnyConnect&lt;/span&gt; &lt;span class="err"&gt;可以区分流量）。&lt;/span&gt;
-
-&lt;span class="err"&gt;在&lt;/span&gt; &lt;span class="n"&gt;LCP&lt;/span&gt; &lt;span class="mf"&gt;2.3&lt;/span&gt; &lt;span class="err"&gt;之后的版本增加了&lt;/span&gt; &lt;span class="n"&gt;list&lt;/span&gt; &lt;span class="err"&gt;的功能，可以在触发&lt;/span&gt; &lt;span class="n"&gt;action&lt;/span&gt; &lt;span class="err"&gt;之后选择需要使用的&lt;/span&gt; &lt;span class="n"&gt;URL&lt;/span&gt;&lt;span class="err"&gt;，对于我这种快把每个格子都用满的来说，这个功能真是来得及时雨。所以也为&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="err"&gt;这条&lt;/span&gt; &lt;span class="n"&gt;action&lt;/span&gt;&lt;span class="p"&gt;](&lt;/span&gt;&lt;span class="n"&gt;https&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="c1"&gt;//launchcenterpro.com/rc2b6p)提供了前提条件，在手机上点击左边的链接可以直接安装中文版，如果需要英文版的可以复制以下内容到 LCP 中：&lt;/span&gt;
-
-&lt;span class="err"&gt;```&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;list&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="n"&gt;Search&lt;/span&gt; &lt;span class="n"&gt;Engine&lt;/span&gt;&lt;span class="o"&gt;|&lt;/span&gt;&lt;span class="n"&gt;Google&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;http&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="c1"&gt;//google.com/search?q=[prompt:Google]&lt;/span&gt;
-                            &lt;span class="o"&gt;|&lt;/span&gt;&lt;span class="n"&gt;Baidu&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;http&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="c1"&gt;//www.baidu.com/s?word=[prompt:Baidu]&lt;/span&gt;
-                            &lt;span class="o"&gt;|&lt;/span&gt;&lt;span class="n"&gt;Bing&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;http&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="c1"&gt;//www.bing.com/search?q=[prompt:Bing]&lt;/span&gt;
-                            &lt;span class="o"&gt;|&lt;/span&gt;&lt;span class="n"&gt;Yahoo&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;http&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="c1"&gt;//search.yahoo.com/mobile/s?p=[prompt:Yahoo]&lt;/span&gt;
-                            &lt;span class="o"&gt;|&lt;/span&gt;&lt;span class="n"&gt;DuckduckGo&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;http&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="c1"&gt;//duckduckgo.com/?q=[prompt:DuckDuckGo]]&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
+&lt;p&gt;&lt;code&gt;launch://x-callback-url/clipboard?text=[prompt-return:Post]  
+                &amp;amp;x-success={{drafts://x-callback-url/create?text={{||clipboard||}}&amp;amp;action={{Post to Google+}}&amp;amp;afterSuccess=Delete  
+                &amp;amp;x-success={{drafts://x-callback-url/create?text={{||clipboard||}}&amp;amp;action={{Post to Facebook}}&amp;amp;afterSuccess=Delete  
+                &amp;amp;x-success={{drafts://x-callback-url/create?text={{||clipboard||}}&amp;amp;action={{Tweet: Ryekee}}&amp;amp;afterSuccess=Delete}}}}}}  
+                &amp;amp;lc-icon=drafts&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Draft 需要激活 Twitter、Facebook 和 G+ 的 URL Action    &lt;/p&gt;
+&lt;h2&gt;四、选择搜索引擎搜索（LCP + Safari）&lt;/h2&gt;
+&lt;p&gt;&lt;img alt="选择搜索引擎" src="http://me.ryekee.com/wp-content/uploads/2014/09/2014-09-03-2350.jpg" /&gt;&lt;/p&gt;
+&lt;p&gt;众所周知的原因，在国内使用 Google 搜索体验十分糟糕，因此在使用 Safari 直接搜索时还需要点击跳转至谷歌香港才能得到搜索结果。而若是将默认搜索引擎设为 Bing 或者 Yahoo 就更差了。使用 VPN 可以解决这个问题，但不是时时都开着 VPN 的（我使用 APNP 和 AnyConnect 可以区分流量）。&lt;/p&gt;
+&lt;p&gt;在 LCP 2.3 之后的版本增加了 list 的功能，可以在触发 action 之后选择需要使用的 URL，对于我这种快把每个格子都用满的来说，这个功能真是来得及时雨。所以也为&lt;a href="https://launchcenterpro.com/rc2b6p"&gt;这条 action&lt;/a&gt;提供了前提条件，在手机上点击左边的链接可以直接安装中文版，如果需要英文版的可以复制以下内容到 LCP 中：&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;[list:Search Engine|Google=http://google.com/search?q=[prompt:Google]
+                            |Baidu=http://www.baidu.com/s?word=[prompt:Baidu]
+                            |Bing=http://www.bing.com/search?q=[prompt:Bing]
+                            |Yahoo=http://search.yahoo.com/mobile/s?p=[prompt:Yahoo]
+                            |DuckduckGo=http://duckduckgo.com/?q=[prompt:DuckDuckGo]]&lt;/code&gt;&lt;/p&gt;
 &lt;h2&gt;五、查看 OmniFocus 透视视图（LCP + OmniFocus）&lt;/h2&gt;
 &lt;p&gt;&lt;img alt="查看透视视图" src="http://me.ryekee.com/wp-content/uploads/2014/09/2014-09-03-2351.jpg" /&gt;&lt;/p&gt;
 &lt;p&gt;在使用 OmniFocus 之前我是通过 Clear + iOS Reminder + iOS Calendar 来进行任务管理和日程跟踪，但是一直都用着不够顺手。直到我发现 Mac 配合 iOS 使用 OF 才能真正发挥 OF 的威力，我就彻底离不开 OF 了。关于 OF 的使用又要开另外一篇文章来说了。&lt;/p&gt;
