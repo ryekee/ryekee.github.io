@@ -1,5 +1,107 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>localhost/Ryekee</title><link>http://blog.ryekee.com/</link><description>我们生来就是要吹牛逼的</description><atom:link href="http://blog.ryekee.com/feeds/all.rss.xml" rel="self"></atom:link><lastBuildDate>Tue, 24 Jun 2014 14:11:00 +0800</lastBuildDate><item><title>OpenWRT 下 mentohust 认证成功却无法上网</title><link>http://blog.ryekee.com/issue-about-mentohust-under-openwrt.html</link><description>&lt;p&gt;如题，帮舍友在他的路由器上配置 mentohust，认证成功之后却又无法上网。 在终端输入&lt;code&gt;route&lt;/code&gt;指令才发现是少了条网关。 &lt;/p&gt;
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>localhost/Ryekee</title><link>http://blog.ryekee.com/</link><description>我们生来就是要吹牛逼的</description><atom:link href="http://blog.ryekee.com/feeds/all.rss.xml" rel="self"></atom:link><lastBuildDate>Thu, 04 Sep 2014 02:49:00 +0800</lastBuildDate><item><title>Launch Center Pro 使用心得</title><link>http://blog.ryekee.com/launch-center-pro.html</link><description>&lt;p&gt;&lt;img alt="Banner" src="http://me.ryekee.com/wp-content/uploads/2014/09/LCP-banner.png" /&gt;&lt;/p&gt;
+&lt;p&gt;Launch Center Pro（简称 LCP）是一款在 iOS 端功能十分强大的 App，LCP 对于 iOS 就像 Alfred 对于 Mac OS X。所以我也不费口舌说这玩意儿有多好用了，你懂就好。要是你不懂那就算了。  &lt;/p&gt;
+&lt;p&gt;实际上我并没有打算要作为一篇很系统很详尽的 Guide 来写。原因有两个，第一个是因为成熟的使用入门已经有很多了，官方的&lt;a href="http://help.contrast.co/hc/en-us"&gt;英文教程&lt;/a&gt;看不懂的话，还有其他的可以看（&lt;a href="http://www.geekswithjuniors.com/note/10-reasons-to-love-launch-center-pro-23.html"&gt;这个&lt;/a&gt;，&lt;a href="http://www.zhihu.com/question/22460443/answer/23171513"&gt;这个&lt;/a&gt;，和&lt;a href="http://mp.weixin.qq.com/s?__biz=MzA4NTMxOTgxNg==&amp;amp;amp;mid=200532964&amp;amp;amp;idx=1&amp;amp;amp;sn=5607d6cd91013fd6f53c4c61bf10d79a&amp;amp;amp;scene=4#wechat_redirect"&gt;这个&lt;/a&gt;）。第二是因为我懒，不想整理。所以我就把别的地方没有看到的，以及我自己原创的一些 action 放出来，喜欢就拿去用啦。有钱的就给我&lt;a href="http://me.ryekee.com/donate"&gt;打赏打赏&lt;/a&gt;啦，没钱的也麻烦看完再关掉啦。  &lt;/p&gt;
+&lt;h2&gt;一、免科学上网发推（LCP + IFTTT）&lt;/h2&gt;
+&lt;p&gt;&lt;img alt="不翻墙发推特" src="http://me.ryekee.com/wp-content/uploads/2014/09/wpid-2014-09-02-0029.jpg" /&gt;&lt;/p&gt;
+&lt;p&gt;生活在天朝又心系墙外人墙外事的朋友必备啦。使用这个 action 你首先要有一个 Twitter 帐号，也就是说你得先爬梯子出去注册一个。其次你要有一个 &lt;a href="https://ifttt.com"&gt;IFTTT&lt;/a&gt; 的帐号，并且激活 &lt;a href="https://ifttt.com/launch_center"&gt;LCP&lt;/a&gt; 和 &lt;a href="https://ifttt.com/twitter"&gt;Twitter&lt;/a&gt; 的 Channel，呐链接都给你了，直接点过去就可以了。&lt;/p&gt;
+&lt;p&gt;第一步，请点这个链接访问我写好的 IFTTT Recipe：&lt;a href="https://ifttt.com/recipes/187660-send-twitter"&gt;https://ifttt.com/recipes/187660-send-twitter&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;第二步，请通过手机的 Safari/Chrome 等浏览器打开安装 action：&lt;a href="https://launchcenterpro.com/kmjmhx"&gt;https://launchcenterpro.com/kmjmhx&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;如果有任何问题都可以上推 mention 我：&lt;a href="http://twitter.ryekee.com"&gt;@Ryekee&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;二、免科学上网发脸书（LCP + IFTTT）&lt;/h2&gt;
+&lt;p&gt;&lt;img alt="不翻墙发脸书" src="http://me.ryekee.com/wp-content/uploads/2014/09/wpid-2014-09-02-0034.jpg" /&gt;&lt;/p&gt;
+&lt;p&gt;这个和上面的原理是一样一样的，你要先有一个 &lt;a href="www.facebook.com"&gt;Facebook&lt;/a&gt; 的帐号，然后你得激活 &lt;a href="https://ifttt.com/facebook"&gt;IFTTT 上的 Channel&lt;/a&gt;。&lt;/p&gt;
+&lt;p&gt;IFTTT 的 Recipe 在这里：&lt;a href="https://ifttt.com/recipes/187656-post-to-facebook-over-gfw-via-lcp"&gt;https://ifttt.com/recipes/187656-post-to-facebook-over-gfw-via-lcp&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;LCP 的 action 在这里：&lt;a href="https://launchcenterpro.com/dnrgjs"&gt;https://launchcenterpro.com/dnrgjs&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;使用过程中有问题也烦请上推来 mention 我啦。&lt;/p&gt;
+&lt;h2&gt;三、SNS 同步更新（LCP + Draft）&lt;/h2&gt;
+&lt;p&gt;&lt;img alt="选择同步方式" src="http://me.ryekee.com/wp-content/uploads/2014/09/2014-09-04-0042.jpg" /&gt;&lt;/p&gt;
+&lt;p&gt;这个 action 需要你的手机安装了 Draft，并且拥有多个社交平台（由于 API 的问题，大多数是墙外平台）的帐号，同时又有这种强烈的分享欲望的需求。看到这篇文章的你们都快去给 Draft 的开发者提意见说希望增加人人微博豆瓣的 API 啊！&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Twitter &amp;amp; Facebook&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;LCP 的 action URL:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;drafts://x-callback-url/create?text=[prompt:What's new?]&amp;amp;action=Twitter%20%26%20Facebook&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;同时，你需要在 Draft 中建立一条名为「Twitter &amp;amp; Facebook」的 URL Action（&lt;strong&gt;请把其中的 Ryekee 更换为你的 Twitter ID&lt;/strong&gt;）：&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;drafts://x-callback-url/create?text=[[draft]]&amp;amp;action=Tweet%3A%20Ryekee&amp;amp;x-success={{drafts://x-callback-url/create?text=[[draft]]&amp;amp;action=Post%20to%20Facebook}}&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Twitter &amp;amp; Weibo&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;LCP 中的 action URL：&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;drafts://x-callback-url/create?text=[prompt: What’s new?]&amp;amp;action=Tweet%20%26%20Weibo&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;同样地，Draft 中建立「Tweet &amp;amp; Weibo」的 URL Action（同上，&lt;strong&gt;请更换 Ryekee 为你的 Twitter ID&lt;/strong&gt;）：&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;drafts://x-callback-url/create?text=[[draft]]&amp;amp;action=Tweet%3A%20Ryekee&amp;amp;x-success={{drafts://x-callback-url/create?text=[[draft]]&amp;amp;action=Post%20to%20Facebook}}&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;上面的图片是我将两个 actions 整合到了一个 action 里，点击&lt;a href="http://launchcenterpro.com/kfbxdj"&gt;链接&lt;/a&gt;安装。安装至 LCP 后&lt;strong&gt;请修改 URL 中的 Twitter ID。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Twitter &amp;amp; Facebook &amp;amp; Google+&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;LCP 中的 action URL（同上，&lt;strong&gt;更换 Ryekee 为你的 Twitter ID&lt;/strong&gt;）：&lt;/p&gt;
+&lt;p&gt;```launch://x-callback-url/clipboard?text=[prompt-return:Post]&lt;br /&gt;
+                &amp;amp;x-success={{drafts://x-callback-url/create?text={{||clipboard||}}&amp;amp;action={{Post to Google+}}&amp;amp;afterSuccess=Delete&lt;br /&gt;
+                &amp;amp;x-success={{drafts://x-callback-url/create?text={{||clipboard||}}&amp;amp;action={{Post to Facebook}}&amp;amp;afterSuccess=Delete&lt;br /&gt;
+                &amp;amp;x-success={{drafts://x-callback-url/create?text={{||clipboard||}}&amp;amp;action={{Tweet: Ryekee}}&amp;amp;afterSuccess=Delete}}}}}}&lt;br /&gt;
+                &amp;amp;lc-icon=drafts&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;Draft&lt;/span&gt; &lt;span class="err"&gt;需要激活&lt;/span&gt; &lt;span class="n"&gt;Twitter&lt;/span&gt;&lt;span class="err"&gt;、&lt;/span&gt;&lt;span class="n"&gt;Facebook&lt;/span&gt; &lt;span class="err"&gt;和&lt;/span&gt; &lt;span class="n"&gt;G&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="err"&gt;的&lt;/span&gt; &lt;span class="n"&gt;URL&lt;/span&gt; &lt;span class="n"&gt;Action&lt;/span&gt;
+
+
+
+
+
+
+&lt;span class="cp"&gt;## 四、选择搜索引擎搜索（LCP + Safari）&lt;/span&gt;
+
+&lt;span class="o"&gt;!&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="err"&gt;选择搜索引擎&lt;/span&gt;&lt;span class="p"&gt;](&lt;/span&gt;&lt;span class="n"&gt;http&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="c1"&gt;//me.ryekee.com/wp-content/uploads/2014/09/2014-09-03-2350.jpg)&lt;/span&gt;
+
+&lt;span class="err"&gt;众所周知的原因，在国内使用&lt;/span&gt; &lt;span class="n"&gt;Google&lt;/span&gt; &lt;span class="err"&gt;搜索体验十分糟糕，因此在使用&lt;/span&gt; &lt;span class="n"&gt;Safari&lt;/span&gt; &lt;span class="err"&gt;直接搜索时还需要点击跳转至谷歌香港才能得到搜索结果。而若是将默认搜索引擎设为&lt;/span&gt; &lt;span class="n"&gt;Bing&lt;/span&gt; &lt;span class="err"&gt;或者&lt;/span&gt; &lt;span class="n"&gt;Yahoo&lt;/span&gt; &lt;span class="err"&gt;就更差了。使用&lt;/span&gt; &lt;span class="n"&gt;VPN&lt;/span&gt; &lt;span class="err"&gt;可以解决这个问题，但不是时时都开着&lt;/span&gt; &lt;span class="n"&gt;VPN&lt;/span&gt; &lt;span class="err"&gt;的（我使用&lt;/span&gt; &lt;span class="n"&gt;APNP&lt;/span&gt; &lt;span class="err"&gt;和&lt;/span&gt; &lt;span class="n"&gt;AnyConnect&lt;/span&gt; &lt;span class="err"&gt;可以区分流量）。&lt;/span&gt;
+
+&lt;span class="err"&gt;在&lt;/span&gt; &lt;span class="n"&gt;LCP&lt;/span&gt; &lt;span class="mf"&gt;2.3&lt;/span&gt; &lt;span class="err"&gt;之后的版本增加了&lt;/span&gt; &lt;span class="n"&gt;list&lt;/span&gt; &lt;span class="err"&gt;的功能，可以在触发&lt;/span&gt; &lt;span class="n"&gt;action&lt;/span&gt; &lt;span class="err"&gt;之后选择需要使用的&lt;/span&gt; &lt;span class="n"&gt;URL&lt;/span&gt;&lt;span class="err"&gt;，对于我这种快把每个格子都用满的来说，这个功能真是来得及时雨。所以也为&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="err"&gt;这条&lt;/span&gt; &lt;span class="n"&gt;action&lt;/span&gt;&lt;span class="p"&gt;](&lt;/span&gt;&lt;span class="n"&gt;https&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="c1"&gt;//launchcenterpro.com/rc2b6p)提供了前提条件，在手机上点击左边的链接可以直接安装中文版，如果需要英文版的可以复制以下内容到 LCP 中：&lt;/span&gt;
+
+&lt;span class="err"&gt;```&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;list&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="n"&gt;Search&lt;/span&gt; &lt;span class="n"&gt;Engine&lt;/span&gt;&lt;span class="o"&gt;|&lt;/span&gt;&lt;span class="n"&gt;Google&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;http&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="c1"&gt;//google.com/search?q=[prompt:Google]&lt;/span&gt;
+                            &lt;span class="o"&gt;|&lt;/span&gt;&lt;span class="n"&gt;Baidu&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;http&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="c1"&gt;//www.baidu.com/s?word=[prompt:Baidu]&lt;/span&gt;
+                            &lt;span class="o"&gt;|&lt;/span&gt;&lt;span class="n"&gt;Bing&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;http&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="c1"&gt;//www.bing.com/search?q=[prompt:Bing]&lt;/span&gt;
+                            &lt;span class="o"&gt;|&lt;/span&gt;&lt;span class="n"&gt;Yahoo&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;http&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="c1"&gt;//search.yahoo.com/mobile/s?p=[prompt:Yahoo]&lt;/span&gt;
+                            &lt;span class="o"&gt;|&lt;/span&gt;&lt;span class="n"&gt;DuckduckGo&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;http&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="c1"&gt;//duckduckgo.com/?q=[prompt:DuckDuckGo]]&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h2&gt;五、查看 OmniFocus 透视视图（LCP + OmniFocus）&lt;/h2&gt;
+&lt;p&gt;&lt;img alt="查看透视视图" src="http://me.ryekee.com/wp-content/uploads/2014/09/2014-09-03-2351.jpg" /&gt;&lt;/p&gt;
+&lt;p&gt;在使用 OmniFocus 之前我是通过 Clear + iOS Reminder + iOS Calendar 来进行任务管理和日程跟踪，但是一直都用着不够顺手。直到我发现 Mac 配合 iOS 使用 OF 才能真正发挥 OF 的威力，我就彻底离不开 OF 了。关于 OF 的使用又要开另外一篇文章来说了。&lt;/p&gt;
+&lt;p&gt;所以如果你有使用 Mac 版本的 OF，可以安装&lt;a href="https://launchcenterpro.com/5vm265"&gt;这条 action&lt;/a&gt;。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;omnifocus:///perspective/[list:Perspective|Today=Today|Due=Due|Flagged=Flagged|Completed=Completed]&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;你需要有名为「Today」、「Due」、「Flagged」、「Completed」几个 Perspective。你也可以修改上面「=」后面的名称为你的 Perspective，「=」前的是在 LCP 触发时显示的名字。&lt;/p&gt;
+&lt;h2&gt;六、剪贴板链接同步至 Pocket（LCP + IFTTT + Pocket）&lt;/h2&gt;
+&lt;p&gt;&lt;img alt="Pocket" src="http://me.ryekee.com/wp-content/uploads/2014/09/2014-09-03-2352.jpg" /&gt;&lt;/p&gt;
+&lt;p&gt;Pocket 是一款很好用的 Read Later 的服务，可惜 iOS 端对 URL-scheme 和 x-callback-url 支持都不够好，但幸好我们有万能的 IFTTT，&lt;a href="https://ifttt.com/pocket"&gt;激活 Channel&lt;/a&gt; 后启用这条 &lt;a href="https://ifttt.com/recipes/200792-save-url-to-pocket-via-lcp"&gt;IFTTT Receipt&lt;/a&gt;，再安装&lt;a href="https://launchcenterpro.com/1gz3k6"&gt;这条 action&lt;/a&gt; 即可。&lt;/p&gt;
+&lt;h2&gt;七、剪贴板内容与桌面同步（LCP + Dropbox）&lt;/h2&gt;
+&lt;p&gt;可能大多数人都会有这个需求：电脑和手机需要互相同步内容，比如某条链接的网址、需要转账银行卡号或者手机通讯录中的信息等。解决的方案有很多，省心的有 Paster 和 CommandC 等 Apps，平民级的解决可以使用 WeChat 网页版，傻瓜化的解决方案是看着另一块屏幕输入。&lt;/p&gt;
+&lt;p&gt;我使用的是 Paster，缺点是仅能在 Mac 和 iOS 间通过 App 同步，而我有时需要将 Win 上的内容同步至手机和 Mac。忘了后来在哪儿看到有人使用 Dropbox 解决了全平台的同步，原理是这样的：&lt;/p&gt;
+&lt;p&gt;使用 LCP 的 Dropbox API 向 Dropbox 指定目录的文件末尾增加剪贴板内容，Dropbox 桌面客户端同步后即可获得。文件内所有同步的内容均不清除，若有需要可以自行清理。&lt;/p&gt;
+&lt;p&gt;点击&lt;a href="https://launchcenterpro.com/6bqnmc"&gt;链接&lt;/a&gt;安装，或者复制以下内容至 LCP：&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;launch://dropbox/append?text=%0A[clipboard]&amp;amp;path=%2FApps%2F&amp;amp;name=List.md&lt;/code&gt;   &lt;/p&gt;
+&lt;p&gt;你可以修改&lt;code&gt;path&lt;/code&gt;后面的参数，指向你的文件存放的目录。&lt;/p&gt;
+&lt;p&gt;同理，你也可以在 Dropbox 中建立一个文件，桌面端将内容复制进去之后在 LCP 中触发&lt;a href="https://launchcenterpro.com/q7b935"&gt;这条 action&lt;/a&gt; 获取文件中的所有内容：&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;launch://dropbox/clipboard?path={{/Apps/Clipboard.md}}&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;PS，你可能发现这两条 actions 的 URL 书写规范不太一致，这是因为 LCP 在 2.3 之后的版本增加了双花括号的支持，允许在括号内直接使用特殊符号，不需要转义。&lt;/p&gt;
+&lt;h2&gt;八、最新一张照片的各类分享&lt;/h2&gt;
+&lt;p&gt;&lt;img alt="最新照片的分享" src="http://me.ryekee.com/wp-content/uploads/2014/09/2014-09-04-0102.jpg" /&gt;&lt;/p&gt;
+&lt;p&gt;可能这是你某天都要进行的工作，拍一张照片，打开一个软件，新建内容，选择图片，输入文字，发送。打开另一个软件，重复上述过程，再打开另一个软件……&lt;/p&gt;
+&lt;p&gt;现在，我们重新定义「分享」！「分享」从没有像今天这样美妙！「分」发你的喜悦，「享」受友人嫉妒。「分享」从没有像今天这样轻松！真的松，松出声。&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://launchcenterpro.com/5jvw42"&gt;上传至 Dropbox&lt;/a&gt; &lt;br /&gt;
+&lt;code&gt;launch://dropbox/addphoto?attach=photo:last&amp;amp;path=&amp;amp;name=&amp;amp;quality=100&amp;amp;getlink=1&amp;amp;lc-icon=dbapi-1&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://launchcenterpro.com/6301nj"&gt;发布至 Facebook&lt;/a&gt; &lt;br /&gt;
+&lt;code&gt;launch://facebook?attach=photo:last&amp;amp;lc-icon=fb&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://launchcenterpro.com/874gqn"&gt;发一条 Tweet&lt;/a&gt; &lt;br /&gt;
+&lt;code&gt;launch://tweet?attach=photo:last&amp;amp;lc-icon=twitter&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://launchcenterpro.com/2tpj8n"&gt;发一条微博&lt;/a&gt; &lt;br /&gt;
+&lt;code&gt;launch://sinaweibo?text=&amp;amp;attach=photo:last&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://launchcenterpro.com/fdjjhc"&gt;通过邮件分享&lt;/a&gt;   &lt;br /&gt;
+&lt;code&gt;launch://email?subject=&amp;amp;body=&amp;amp;bcc=&amp;amp;attach=photo:last&amp;amp;fullres=1&amp;amp;lc-icon=mailto&lt;/code&gt; &lt;br /&gt;
+可在&lt;code&gt;bcc&lt;/code&gt;参数后填写你的邮箱&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://launchcenterpro.com/f83ldy"&gt;通过彩信 / iMessage 分享&lt;/a&gt; &lt;br /&gt;
+&lt;code&gt;launch://message?attach=photo:last&amp;amp;lc-icon=sms&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://launchcenterpro.com/g1dd72"&gt;使用 iOS Share Sheet 分享&lt;/a&gt; &lt;br /&gt;
+&lt;code&gt;launch://sharesheet?attach=photo:last&lt;/code&gt;&lt;/p&gt;
+&lt;h2&gt;九、直接添加笔记至 Evernote（LCP + Draft + Evernote）&lt;/h2&gt;
+&lt;p&gt;&lt;img alt="新建Evernote笔记" src="http://me.ryekee.com/wp-content/uploads/2014/09/2014-09-04-0120.jpg" /&gt;&lt;/p&gt;
+&lt;p&gt;又是一款跟 Pocket 一样出色的互联网服务，又是一款跟 Pocket 一样的对 URL scheme 和 x-callback-url 支持不佳。于是我们又一次可以感谢 Draft ——幸好有了你。&lt;/p&gt;
+&lt;p&gt;点击&lt;a href="https://launchcenterpro.com/wrpn84"&gt;此链接&lt;/a&gt;安装 action 即可。&lt;/p&gt;
+&lt;p&gt;需要激活 Draft 中的 Evernote 名为「Save to Evernote」的相关 Action。&lt;/p&gt;
+&lt;p&gt;文章陆陆续续写了三天多，文中所有链接都是使用第七条提到的方法来与桌面同步的，尽管已经很方便，但还是有可能出现错误……毕竟量有点大，有些链接可能弄混了。所以如果出现了任何问题请指正，谢谢～如果你也有特别的使用方法，也希望能与我分享～:-)&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Ryekee</dc:creator><pubDate>Thu, 04 Sep 2014 02:49:00 +0800</pubDate><guid>tag:blog.ryekee.com,2014-09-04:launch-center-pro.html</guid><category>LCP</category><category>LaunchCenterPro</category><category>Apple</category><category>iPhone</category><category>iOS</category><category>IFTTT</category><category>Pocket</category><category>Draft</category><category>Evernote</category><category>Mac OS</category><category>Geek</category></item><item><title>OpenWRT 下 mentohust 认证成功却无法上网</title><link>http://blog.ryekee.com/issue-about-mentohust-under-openwrt.html</link><description>&lt;p&gt;如题，帮舍友在他的路由器上配置 mentohust，认证成功之后却又无法上网。 在终端输入&lt;code&gt;route&lt;/code&gt;指令才发现是少了条网关。 &lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;root&lt;/span&gt;&lt;span class="err"&gt;@&lt;/span&gt;&lt;span class="n"&gt;DreamBox&lt;/span&gt;&lt;span class="o"&gt;:~&lt;/span&gt;&lt;span class="err"&gt;#&lt;/span&gt; &lt;span class="n"&gt;route&lt;/span&gt; 
 &lt;span class="n"&gt;Kernel&lt;/span&gt; &lt;span class="n"&gt;IP&lt;/span&gt; &lt;span class="n"&gt;routing&lt;/span&gt; &lt;span class="n"&gt;table&lt;/span&gt; 
 &lt;span class="n"&gt;Destination&lt;/span&gt;     &lt;span class="n"&gt;Gateway&lt;/span&gt;   &lt;span class="n"&gt;Genmask&lt;/span&gt;          &lt;span class="n"&gt;Flags&lt;/span&gt;   &lt;span class="n"&gt;Metric&lt;/span&gt;  &lt;span class="n"&gt;Ref&lt;/span&gt;   &lt;span class="n"&gt;Use&lt;/span&gt;   &lt;span class="n"&gt;Iface&lt;/span&gt;  
@@ -329,37 +431,4 @@ First release in '92, a nerd, programmer. Version 0.2.3&lt;/p&gt;
 &lt;p&gt;&lt;del&gt;&lt;em&gt;安装插件&lt;/em&gt; &lt;em&gt;更换主题&lt;/em&gt; &lt;em&gt;修改配置&lt;/em&gt;什么的，等我心情好了再来填坑吧。。&lt;/del&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Ryekee</dc:creator><pubDate>Wed, 30 Oct 2013 10:35:00 +0800</pubDate><guid>tag:blog.ryekee.com,2013-10-30:guidebook-to-pelican.html</guid><category>geek</category><category>blog</category><category>pelican</category></item><item><title>About me</title><link>http://blog.ryekee.com/about-me.html</link><description>&lt;p&gt;First release in '92, a nerd, programmer. Version 0.4.3&lt;/p&gt;
 &lt;p&gt;Hi, I'm &lt;a href="http://aboutme.ryekee.com"&gt;Ryekee Zhong&lt;/a&gt;, study Intelligence Science and Technology in &lt;a href="http://www.xidian.edu.cn"&gt;Xidian University&lt;/a&gt;. &lt;br /&gt;
 This is a brand new blog for me, I use &lt;a href="http://www.pelican.com"&gt;Pelican&lt;/a&gt; to create a blog on &lt;a href="http://github.ryekee.com"&gt;Github&lt;/a&gt;. And my main blog &lt;a href="http://ryekee.com"&gt;RyekeeBlog&lt;/a&gt; is still working with Wordpress.&lt;/p&gt;
-&lt;p&gt;You can visit &lt;a href="http://ryekee.com/aboutme"&gt;here&lt;/a&gt; to view more information about me.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Ryekee</dc:creator><pubDate>Mon, 21 Oct 2013 15:15:00 +0800</pubDate><guid>tag:blog.ryekee.com,2013-10-21:about-me.html</guid><category>about</category></item><item><title>因为那个瓶子留在了森林</title><link>http://blog.ryekee.com/fairy-story-about-love.html</link><description>&lt;blockquote&gt;
-&lt;p&gt;这是一个纠结的晚上用30分钟写成的故事，又经由圆脑袋同学整理修改，所以成了现在这幅模样。故事还没有完结，等我们续写。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;从前&lt;br /&gt;
-在森林里有一只小老鼠&lt;br /&gt;
-小老鼠的名字叫小度 &lt;br /&gt;
-他很喜欢很喜欢隔壁那只小兔子&lt;br /&gt;
-可是小老鼠很胆小 小兔子不知道老鼠喜欢她&lt;br /&gt;
-小老鼠就偷偷的 跑去买牛奶放到小兔子家门口&lt;br /&gt;
-日复一日 年复一年&lt;br /&gt;
-小兔子很感动 &lt;br /&gt;
-可她不知道是小老鼠为她送的牛奶  &lt;/p&gt;
-&lt;p&gt;后来 &lt;br /&gt;
-小灰兔来了&lt;br /&gt;
-小白兔等不到那个送牛奶的人&lt;br /&gt;
-就和小灰兔一起生活&lt;br /&gt;
-她很喜欢小灰兔&lt;br /&gt;
-可那瓶牛奶一直一直在小兔子的心里  &lt;/p&gt;
-&lt;p&gt;小老鼠看小兔子过的挺开心的&lt;br /&gt;
-就没有再送牛奶&lt;br /&gt;
-他也不想再留在大森林里了&lt;br /&gt;
-离开的最后一天&lt;br /&gt;
-他想告诉小兔子真相&lt;br /&gt;
-可当他去找小兔子的时候&lt;br /&gt;
-却看见小白兔和小灰兔在一起&lt;br /&gt;
-脸上洋溢着幸福的笑容 &lt;br /&gt;
-小老鼠就留下了一个空瓶子&lt;br /&gt;
-离开了森林  &lt;/p&gt;
-&lt;p&gt;他在外面的世界遇到了很多朋友&lt;br /&gt;
-认识了很多很多她&lt;br /&gt;
-可再也没有曾经每天送牛奶的那样的心情了&lt;br /&gt;
-他和别的小动物在一起&lt;br /&gt;
-又分开&lt;br /&gt;
-只因为那个瓶子已经留在了森林&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Ryekee</dc:creator><pubDate>Thu, 17 Oct 2013 17:22:13 +0800</pubDate><guid>tag:blog.ryekee.com,2013-10-17:fairy-story-about-love.html</guid><category>story</category></item></channel></rss>
+&lt;p&gt;You can visit &lt;a href="http://ryekee.com/aboutme"&gt;here&lt;/a&gt; to view more information about me.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Ryekee</dc:creator><pubDate>Mon, 21 Oct 2013 15:15:00 +0800</pubDate><guid>tag:blog.ryekee.com,2013-10-21:about-me.html</guid><category>about</category></item></channel></rss>
